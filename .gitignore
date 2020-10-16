@@ -1,0 +1,11 @@
+# Node
+node_modules
+*.swp
+
+
+# Terraform
+.terraform/
+*.tfstate*
+
+# Ansible
+*.retry
