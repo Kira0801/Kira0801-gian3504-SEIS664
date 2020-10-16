@@ -1,0 +1,1408 @@
+2020/09/07 00:26:27 [INFO] Terraform version: 0.13.2  
+2020/09/07 00:26:27 [INFO] Go runtime version: go1.14.7
+2020/09/07 00:26:27 [INFO] CLI args: []string{"/home/betz4871/bin/terraform", "apply"}
+2020/09/07 00:26:27 [DEBUG] Attempting to open CLI config file: /home/betz4871/.terraformrc
+2020/09/07 00:26:27 [DEBUG] File doesn't exist, but doesn't need to. Ignoring.
+2020/09/07 00:26:27 [DEBUG] ignoring non-existing provider search directory terraform.d/plugins
+2020/09/07 00:26:27 [DEBUG] ignoring non-existing provider search directory /home/betz4871/.terraform.d/plugins
+2020/09/07 00:26:27 [DEBUG] ignoring non-existing provider search directory /home/betz4871/.local/share/terraform/plugins
+2020/09/07 00:26:27 [DEBUG] ignoring non-existing provider search directory /usr/local/share/terraform/plugins
+2020/09/07 00:26:27 [DEBUG] ignoring non-existing provider search directory /usr/share/terraform/plugins
+2020/09/07 00:26:27 [INFO] CLI command args: []string{"apply"}
+2020/09/07 00:26:27 [TRACE] Meta.Backend: no config given or present on disk, so returning nil config
+2020/09/07 00:26:27 [TRACE] Meta.Backend: backend has not previously been initialized in this working directory
+2020/09/07 00:26:27 [DEBUG] New state was assigned lineage "bbfb85e4-dc2f-d5d2-dc57-e397653331b8"
+2020/09/07 00:26:27 [TRACE] Meta.Backend: using default local state only (no backend configuration, and no existing initialized backend)
+2020/09/07 00:26:27 [TRACE] Meta.Backend: instantiated backend of type <nil>
+2020/09/07 00:26:27 [TRACE] providercache.fillMetaCache: scanning directory .terraform/plugins
+2020/09/07 00:26:27 [TRACE] getproviders.SearchLocalDirectory: .terraform/plugins is a symlink to .terraform/plugins
+2020/09/07 00:26:27 [TRACE] getproviders.SearchLocalDirectory: found registry.terraform.io/-/google v3.37.0 for linux_amd64 at .terraform/plugins/registry.terraform.io/-/google/3.37.0/linux_amd64
+2020/09/07 00:26:27 [TRACE] getproviders.SearchLocalDirectory: found registry.terraform.io/hashicorp/google v2.5.1 for linux_amd64 at .terraform/plugins/registry.terraform.io/hashicorp/google/2.5.1/linux_amd64
+2020/09/07 00:26:27 [TRACE] providercache.fillMetaCache: including .terraform/plugins/registry.terraform.io/-/google/3.37.0/linux_amd64 as a candidate package for registry.terraform.io/-/google 3.37.0
+2020/09/07 00:26:27 [TRACE] providercache.fillMetaCache: including .terraform/plugins/registry.terraform.io/hashicorp/google/2.5.1/linux_amd64 as a candidate package for registry.terraform.io/hashicorp/google 2.5.1
+2020/09/07 00:26:27 [DEBUG] checking for provisioner in "."
+2020/09/07 00:26:27 [DEBUG] checking for provisioner in "/home/betz4871/bin"
+2020/09/07 00:26:27 [DEBUG] checking for provisioner in ".terraform/plugins/linux_amd64"
+2020/09/07 00:26:27 [TRACE] Meta.Backend: backend <nil> does not support operations, so wrapping it in a local backend
+2020/09/07 00:26:27 [INFO] backend/local: starting Apply operation
+2020/09/07 00:26:27 [TRACE] backend/local: requesting state manager for workspace "default"
+2020/09/07 00:26:27 [TRACE] backend/local: state manager for workspace "default" will:
+ - read initial snapshot from terraform.tfstate
+ - write new snapshots to terraform.tfstate
+ - create any backup at terraform.tfstate.backup
+2020/09/07 00:26:27 [TRACE] backend/local: requesting state lock for workspace "default"
+2020/09/07 00:26:27 [TRACE] statemgr.Filesystem: preparing to manage state snapshots at terraform.tfstate
+2020/09/07 00:26:27 [TRACE] statemgr.Filesystem: no previously-stored snapshot exists
+2020/09/07 00:26:27 [TRACE] statemgr.Filesystem: locking terraform.tfstate using fcntl flock
+2020/09/07 00:26:27 [TRACE] statemgr.Filesystem: writing lock metadata to .terraform.tfstate.lock.info
+2020/09/07 00:26:27 [TRACE] backend/local: reading remote state for workspace "default"
+2020/09/07 00:26:27 [TRACE] statemgr.Filesystem: reading latest snapshot from terraform.tfstate
+2020/09/07 00:26:27 [TRACE] statemgr.Filesystem: snapshot file has nil snapshot, but that's okay
+2020/09/07 00:26:27 [TRACE] statemgr.Filesystem: read nil snapshot
+2020/09/07 00:26:27 [TRACE] backend/local: retrieving local state snapshot for workspace "default"
+2020/09/07 00:26:27 [TRACE] backend/local: building context for current working directory
+2020/09/07 00:26:27 [TRACE] terraform.NewContext: starting
+2020/09/07 00:26:27 [TRACE] terraform.NewContext: loading provider schemas
+2020/09/07 00:26:27 [TRACE] LoadSchemas: retrieving schema for provider type "registry.terraform.io/hashicorp/google"
+2020-09-07T00:26:27.829Z [INFO]  plugin: configuring client automatic mTLS
+2020-09-07T00:26:27.870Z [DEBUG] plugin: starting plugin: path=.terraform/plugins/registry.terraform.io/hashicorp/google/2.5.1/linux_amd64/terraform-provider-google_v2.5.1_x4 args=[.terraform/plugins/registry.terraform.io/hashicorp/google/2.5.1/linux_amd64/terraform-provider-google_v2.5.1_x4]
+2020-09-07T00:26:27.871Z [DEBUG] plugin: plugin started: path=.terraform/plugins/registry.terraform.io/hashicorp/google/2.5.1/linux_amd64/terraform-provider-google_v2.5.1_x4 pid=2693
+2020-09-07T00:26:27.871Z [DEBUG] plugin: waiting for RPC address: path=.terraform/plugins/registry.terraform.io/hashicorp/google/2.5.1/linux_amd64/terraform-provider-google_v2.5.1_x4
+2020-09-07T00:26:27.891Z [INFO]  plugin.terraform-provider-google_v2.5.1_x4: configuring server automatic mTLS: timestamp=2020-09-07T00:26:27.890Z
+2020-09-07T00:26:27.933Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: plugin address: address=/tmp/plugin737526242 network=unix timestamp=2020-09-07T00:26:27.933Z
+2020-09-07T00:26:27.933Z [DEBUG] plugin: using plugin: version=5
+2020/09/07 00:26:28 [TRACE] GRPCProvider: GetSchema
+2020-09-07T00:26:28.019Z [TRACE] plugin.stdio: waiting for stdio data
+2020-09-07T00:26:28.024Z [WARN]  plugin.stdio: received EOF, stopping recv loop: err="rpc error: code = Unimplemented desc = unknown service plugin.GRPCStdio"
+2020/09/07 00:26:28 [TRACE] No provider meta schema returned
+2020/09/07 00:26:28 [TRACE] GRPCProvider: Close
+2020-09-07T00:26:28.056Z [DEBUG] plugin: plugin process exited: path=.terraform/plugins/registry.terraform.io/hashicorp/google/2.5.1/linux_amd64/terraform-provider-google_v2.5.1_x4 pid=2693
+2020-09-07T00:26:28.056Z [DEBUG] plugin: plugin exited
+2020/09/07 00:26:28 [TRACE] terraform.NewContext: complete
+2020/09/07 00:26:28 [TRACE] backend/local: finished building terraform.Context
+2020/09/07 00:26:28 [TRACE] backend/local: requesting interactive input, if necessary
+2020/09/07 00:26:28 [TRACE] Context.Input: Prompting for provider arguments
+2020/09/07 00:26:28 [TRACE] Context.Input: Provider provider.google declared at providers.tf:1,1-18
+2020/09/07 00:26:28 [TRACE] Context.Input: Input for provider.google: map[string]cty.Value{}
+2020/09/07 00:26:28 [TRACE] backend/local: running validation operation
+2020/09/07 00:26:28 [INFO] terraform: building graph: GraphTypeValidate
+2020/09/07 00:26:28 [TRACE] Executing graph transform *terraform.ConfigTransformer
+2020/09/07 00:26:28 [TRACE] ConfigTransformer: Starting for path: 
+2020/09/07 00:26:28 [TRACE] Completed graph transform *terraform.ConfigTransformer with new graph:
+  google_container_cluster.primary - *terraform.NodeValidatableResource
+  ------
+2020/09/07 00:26:28 [TRACE] Executing graph transform *terraform.LocalTransformer
+2020/09/07 00:26:28 [TRACE] Completed graph transform *terraform.LocalTransformer (no changes)
+2020/09/07 00:26:28 [TRACE] Executing graph transform *terraform.OutputTransformer
+2020/09/07 00:26:28 [TRACE] Completed graph transform *terraform.OutputTransformer (no changes)
+2020/09/07 00:26:28 [TRACE] Executing graph transform *terraform.OrphanResourceInstanceTransformer
+2020/09/07 00:26:28 [TRACE] Completed graph transform *terraform.OrphanResourceInstanceTransformer (no changes)
+2020/09/07 00:26:28 [TRACE] Executing graph transform *terraform.StateTransformer
+2020/09/07 00:26:28 [TRACE] StateTransformer: state is empty, so nothing to do
+2020/09/07 00:26:28 [TRACE] Completed graph transform *terraform.StateTransformer (no changes)
+2020/09/07 00:26:28 [TRACE] Executing graph transform *terraform.OrphanOutputTransformer
+2020/09/07 00:26:28 [TRACE] Completed graph transform *terraform.OrphanOutputTransformer (no changes)
+2020/09/07 00:26:28 [TRACE] Executing graph transform *terraform.AttachResourceConfigTransformer
+2020/09/07 00:26:28 [TRACE] AttachResourceConfigTransformer: attaching to "google_container_cluster.primary" (*terraform.NodeValidatableResource) config from main.tf:1,1-46
+2020/09/07 00:26:28 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to google_container_cluster.primary
+2020/09/07 00:26:28 [TRACE] Completed graph transform *terraform.AttachResourceConfigTransformer (no changes)
+2020/09/07 00:26:28 [TRACE] Executing graph transform *terraform.AttachStateTransformer
+2020/09/07 00:26:28 [TRACE] Completed graph transform *terraform.AttachStateTransformer (no changes)
+2020/09/07 00:26:28 [TRACE] Executing graph transform *terraform.RootVariableTransformer
+2020/09/07 00:26:28 [TRACE] Completed graph transform *terraform.RootVariableTransformer with new graph:
+  google_container_cluster.primary - *terraform.NodeValidatableResource
+  var.cluster_name - *terraform.NodeRootVariable
+  var.project_id - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+  var.zone - *terraform.NodeRootVariable
+  ------
+2020/09/07 00:26:28 [TRACE] Executing graph transform *terraform.MissingProvisionerTransformer
+2020/09/07 00:26:28 [TRACE] Completed graph transform *terraform.MissingProvisionerTransformer (no changes)
+2020/09/07 00:26:28 [TRACE] Executing graph transform *terraform.ProvisionerTransformer
+2020/09/07 00:26:28 [TRACE] Completed graph transform *terraform.ProvisionerTransformer (no changes)
+2020/09/07 00:26:28 [TRACE] Executing graph transform *terraform.ModuleVariableTransformer
+2020/09/07 00:26:28 [TRACE] Completed graph transform *terraform.ModuleVariableTransformer (no changes)
+2020/09/07 00:26:28 [TRACE] Executing graph transform *terraform.graphTransformerMulti
+2020/09/07 00:26:28 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderConfigTransformer
+2020/09/07 00:26:28 [TRACE] ProviderConfigTransformer: attaching to "provider[\"registry.terraform.io/hashicorp/google\"]" provider configuration from providers.tf:1,1-18
+2020/09/07 00:26:28 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderConfigTransformer with new graph:
+  google_container_cluster.primary - *terraform.NodeValidatableResource
+  provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  var.cluster_name - *terraform.NodeRootVariable
+  var.project_id - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+  var.zone - *terraform.NodeRootVariable
+  ------
+2020/09/07 00:26:28 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.MissingProviderTransformer
+2020/09/07 00:26:28 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.MissingProviderTransformer (no changes)
+2020/09/07 00:26:28 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderTransformer
+2020/09/07 00:26:28 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/hashicorp/google"] serving google_container_cluster.primary
+2020/09/07 00:26:28 [DEBUG] ProviderTransformer: "google_container_cluster.primary" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/hashicorp/google"]
+2020/09/07 00:26:28 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderTransformer with new graph:
+  google_container_cluster.primary - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  var.cluster_name - *terraform.NodeRootVariable
+  var.project_id - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+  var.zone - *terraform.NodeRootVariable
+  ------
+2020/09/07 00:26:28 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.PruneProviderTransformer
+2020/09/07 00:26:28 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.PruneProviderTransformer (no changes)
+2020/09/07 00:26:28 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ParentProviderTransformer
+2020/09/07 00:26:28 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ParentProviderTransformer (no changes)
+2020/09/07 00:26:28 [TRACE] Completed graph transform *terraform.graphTransformerMulti with new graph:
+  google_container_cluster.primary - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  var.cluster_name - *terraform.NodeRootVariable
+  var.project_id - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+  var.zone - *terraform.NodeRootVariable
+  ------
+2020/09/07 00:26:28 [TRACE] Executing graph transform *terraform.RemovedModuleTransformer
+2020/09/07 00:26:28 [TRACE] Completed graph transform *terraform.RemovedModuleTransformer (no changes)
+2020/09/07 00:26:28 [TRACE] Executing graph transform *terraform.AttachSchemaTransformer
+2020/09/07 00:26:28 [TRACE] AttachSchemaTransformer: attaching provider config schema to provider["registry.terraform.io/hashicorp/google"]
+2020/09/07 00:26:28 [TRACE] AttachSchemaTransformer: attaching resource schema to google_container_cluster.primary
+2020/09/07 00:26:28 [TRACE] Completed graph transform *terraform.AttachSchemaTransformer (no changes)
+2020/09/07 00:26:28 [TRACE] Executing graph transform *terraform.ModuleExpansionTransformer
+2020/09/07 00:26:28 [TRACE] Completed graph transform *terraform.ModuleExpansionTransformer (no changes)
+2020/09/07 00:26:28 [TRACE] Executing graph transform *terraform.ReferenceTransformer
+2020/09/07 00:26:28 [DEBUG] ReferenceTransformer: "provider[\"registry.terraform.io/hashicorp/google\"]" references: []
+2020/09/07 00:26:28 [DEBUG] ReferenceTransformer: "google_container_cluster.primary" references: []
+2020/09/07 00:26:28 [DEBUG] ReferenceTransformer: "var.project_id" references: []
+2020/09/07 00:26:28 [DEBUG] ReferenceTransformer: "var.region" references: []
+2020/09/07 00:26:28 [DEBUG] ReferenceTransformer: "var.cluster_name" references: []
+2020/09/07 00:26:28 [DEBUG] ReferenceTransformer: "var.zone" references: []
+2020/09/07 00:26:28 [TRACE] Completed graph transform *terraform.ReferenceTransformer (no changes)
+2020/09/07 00:26:28 [TRACE] Executing graph transform *terraform.attachDataResourceDependenciesTransformer
+2020/09/07 00:26:28 [TRACE] Completed graph transform *terraform.attachDataResourceDependenciesTransformer (no changes)
+2020/09/07 00:26:28 [TRACE] Executing graph transform *terraform.TargetsTransformer
+2020/09/07 00:26:28 [TRACE] Completed graph transform *terraform.TargetsTransformer (no changes)
+2020/09/07 00:26:28 [TRACE] Executing graph transform *terraform.ForcedCBDTransformer
+2020/09/07 00:26:28 [TRACE] Completed graph transform *terraform.ForcedCBDTransformer (no changes)
+2020/09/07 00:26:28 [TRACE] Executing graph transform *terraform.CountBoundaryTransformer
+2020/09/07 00:26:28 [TRACE] Completed graph transform *terraform.CountBoundaryTransformer with new graph:
+  google_container_cluster.primary - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    google_container_cluster.primary - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+    var.cluster_name - *terraform.NodeRootVariable
+    var.project_id - *terraform.NodeRootVariable
+    var.region - *terraform.NodeRootVariable
+    var.zone - *terraform.NodeRootVariable
+  provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  var.cluster_name - *terraform.NodeRootVariable
+  var.project_id - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+  var.zone - *terraform.NodeRootVariable
+  ------
+2020/09/07 00:26:28 [TRACE] Executing graph transform *terraform.CloseProviderTransformer
+2020/09/07 00:26:28 [TRACE] Completed graph transform *terraform.CloseProviderTransformer with new graph:
+  google_container_cluster.primary - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    google_container_cluster.primary - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+    var.cluster_name - *terraform.NodeRootVariable
+    var.project_id - *terraform.NodeRootVariable
+    var.region - *terraform.NodeRootVariable
+    var.zone - *terraform.NodeRootVariable
+  provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/google"] (close) - *terraform.graphNodeCloseProvider
+    google_container_cluster.primary - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  var.cluster_name - *terraform.NodeRootVariable
+  var.project_id - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+  var.zone - *terraform.NodeRootVariable
+  ------
+2020/09/07 00:26:28 [TRACE] Executing graph transform *terraform.CloseProvisionerTransformer
+2020/09/07 00:26:28 [TRACE] Completed graph transform *terraform.CloseProvisionerTransformer (no changes)
+2020/09/07 00:26:28 [TRACE] Executing graph transform *terraform.CloseRootModuleTransformer
+2020/09/07 00:26:28 [TRACE] Completed graph transform *terraform.CloseRootModuleTransformer with new graph:
+  google_container_cluster.primary - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    google_container_cluster.primary - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+    var.cluster_name - *terraform.NodeRootVariable
+    var.project_id - *terraform.NodeRootVariable
+    var.region - *terraform.NodeRootVariable
+    var.zone - *terraform.NodeRootVariable
+  provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/google"] (close) - *terraform.graphNodeCloseProvider
+    google_container_cluster.primary - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  root - *terraform.nodeCloseModule
+    meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    provider["registry.terraform.io/hashicorp/google"] (close) - *terraform.graphNodeCloseProvider
+  var.cluster_name - *terraform.NodeRootVariable
+  var.project_id - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+  var.zone - *terraform.NodeRootVariable
+  ------
+2020/09/07 00:26:28 [TRACE] Executing graph transform *terraform.TransitiveReductionTransformer
+2020/09/07 00:26:28 [TRACE] Completed graph transform *terraform.TransitiveReductionTransformer with new graph:
+  google_container_cluster.primary - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    google_container_cluster.primary - *terraform.NodeValidatableResource
+    var.cluster_name - *terraform.NodeRootVariable
+    var.project_id - *terraform.NodeRootVariable
+    var.region - *terraform.NodeRootVariable
+    var.zone - *terraform.NodeRootVariable
+  provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/google"] (close) - *terraform.graphNodeCloseProvider
+    google_container_cluster.primary - *terraform.NodeValidatableResource
+  root - *terraform.nodeCloseModule
+    meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    provider["registry.terraform.io/hashicorp/google"] (close) - *terraform.graphNodeCloseProvider
+  var.cluster_name - *terraform.NodeRootVariable
+  var.project_id - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+  var.zone - *terraform.NodeRootVariable
+  ------
+2020/09/07 00:26:28 [DEBUG] Starting graph walk: walkValidate
+2020/09/07 00:26:28 [TRACE] dag/walk: visiting "var.region"
+2020/09/07 00:26:28 [TRACE] vertex "var.region": starting visit (*terraform.NodeRootVariable)
+2020/09/07 00:26:28 [TRACE] vertex "var.region": evaluating
+2020/09/07 00:26:28 [TRACE] [walkValidate] Entering eval tree: var.region
+2020/09/07 00:26:28 [TRACE] eval: *terraform.EvalSequence
+2020/09/07 00:26:28 [TRACE] [walkValidate] Exiting eval tree: var.region
+2020/09/07 00:26:28 [TRACE] vertex "var.region": visit complete
+2020/09/07 00:26:28 [TRACE] dag/walk: visiting "var.cluster_name"
+2020/09/07 00:26:28 [TRACE] vertex "var.cluster_name": starting visit (*terraform.NodeRootVariable)
+2020/09/07 00:26:28 [TRACE] vertex "var.cluster_name": evaluating
+2020/09/07 00:26:28 [TRACE] [walkValidate] Entering eval tree: var.cluster_name
+2020/09/07 00:26:28 [TRACE] eval: *terraform.EvalSequence
+2020/09/07 00:26:28 [TRACE] [walkValidate] Exiting eval tree: var.cluster_name
+2020/09/07 00:26:28 [TRACE] vertex "var.cluster_name": visit complete
+2020/09/07 00:26:28 [TRACE] dag/walk: visiting "var.zone"
+2020/09/07 00:26:28 [TRACE] vertex "var.zone": starting visit (*terraform.NodeRootVariable)
+2020/09/07 00:26:28 [TRACE] vertex "var.zone": evaluating
+2020/09/07 00:26:28 [TRACE] [walkValidate] Entering eval tree: var.zone
+2020/09/07 00:26:28 [TRACE] eval: *terraform.EvalSequence
+2020/09/07 00:26:28 [TRACE] [walkValidate] Exiting eval tree: var.zone
+2020/09/07 00:26:28 [TRACE] vertex "var.zone": visit complete
+2020/09/07 00:26:28 [TRACE] dag/walk: visiting "var.project_id"
+2020/09/07 00:26:28 [TRACE] vertex "var.project_id": starting visit (*terraform.NodeRootVariable)
+2020/09/07 00:26:28 [TRACE] vertex "var.project_id": evaluating
+2020/09/07 00:26:28 [TRACE] [walkValidate] Entering eval tree: var.project_id
+2020/09/07 00:26:28 [TRACE] eval: *terraform.EvalSequence
+2020/09/07 00:26:28 [TRACE] [walkValidate] Exiting eval tree: var.project_id
+2020/09/07 00:26:28 [TRACE] vertex "var.project_id": visit complete
+2020/09/07 00:26:28 [TRACE] dag/walk: visiting "provider[\"registry.terraform.io/hashicorp/google\"]"
+2020/09/07 00:26:28 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/google\"]": starting visit (*terraform.NodeApplyableProvider)
+2020/09/07 00:26:28 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/google\"]": evaluating
+2020/09/07 00:26:28 [TRACE] [walkValidate] Entering eval tree: provider["registry.terraform.io/hashicorp/google"]
+2020/09/07 00:26:28 [TRACE] eval: *terraform.EvalSequence
+2020/09/07 00:26:28 [TRACE] eval: *terraform.EvalInitProvider
+2020-09-07T00:26:28.059Z [INFO]  plugin: configuring client automatic mTLS
+2020-09-07T00:26:28.114Z [DEBUG] plugin: starting plugin: path=.terraform/plugins/registry.terraform.io/hashicorp/google/2.5.1/linux_amd64/terraform-provider-google_v2.5.1_x4 args=[.terraform/plugins/registry.terraform.io/hashicorp/google/2.5.1/linux_amd64/terraform-provider-google_v2.5.1_x4]
+2020-09-07T00:26:28.115Z [DEBUG] plugin: plugin started: path=.terraform/plugins/registry.terraform.io/hashicorp/google/2.5.1/linux_amd64/terraform-provider-google_v2.5.1_x4 pid=2703
+2020-09-07T00:26:28.115Z [DEBUG] plugin: waiting for RPC address: path=.terraform/plugins/registry.terraform.io/hashicorp/google/2.5.1/linux_amd64/terraform-provider-google_v2.5.1_x4
+2020-09-07T00:26:28.134Z [INFO]  plugin.terraform-provider-google_v2.5.1_x4: configuring server automatic mTLS: timestamp=2020-09-07T00:26:28.133Z
+2020-09-07T00:26:28.176Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: plugin address: address=/tmp/plugin358237535 network=unix timestamp=2020-09-07T00:26:28.176Z
+2020-09-07T00:26:28.177Z [DEBUG] plugin: using plugin: version=5
+2020/09/07 00:26:28 [TRACE] BuiltinEvalContext: Initialized "provider[\"registry.terraform.io/hashicorp/google\"]" provider for provider["registry.terraform.io/hashicorp/google"]
+2020/09/07 00:26:28 [TRACE] eval: *terraform.EvalOpFilter
+2020/09/07 00:26:28 [TRACE] eval: *terraform.EvalSequence
+2020/09/07 00:26:28 [TRACE] eval: *terraform.EvalGetProvider
+2020/09/07 00:26:28 [TRACE] eval: *terraform.EvalValidateProvider
+2020/09/07 00:26:28 [TRACE] buildProviderConfig for provider["registry.terraform.io/hashicorp/google"]: using explicit config only
+2020/09/07 00:26:28 [TRACE] GRPCProvider: GetSchema
+2020-09-07T00:26:28.258Z [TRACE] plugin.stdio: waiting for stdio data
+2020-09-07T00:26:28.260Z [WARN]  plugin.stdio: received EOF, stopping recv loop: err="rpc error: code = Unimplemented desc = unknown service plugin.GRPCStdio"
+2020/09/07 00:26:28 [TRACE] No provider meta schema returned
+2020/09/07 00:26:28 [TRACE] GRPCProvider: PrepareProviderConfig
+2020/09/07 00:26:28 [TRACE] eval: terraform.EvalNoop
+2020/09/07 00:26:28 [TRACE] eval: terraform.EvalNoop
+2020/09/07 00:26:28 [TRACE] eval: terraform.EvalNoop
+2020/09/07 00:26:28 [TRACE] [walkValidate] Exiting eval tree: provider["registry.terraform.io/hashicorp/google"]
+2020/09/07 00:26:28 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/google\"]": visit complete
+2020/09/07 00:26:28 [TRACE] dag/walk: visiting "google_container_cluster.primary"
+2020/09/07 00:26:28 [TRACE] vertex "google_container_cluster.primary": starting visit (*terraform.NodeValidatableResource)
+2020/09/07 00:26:28 [TRACE] vertex "google_container_cluster.primary": evaluating
+2020/09/07 00:26:28 [TRACE] [walkValidate] Entering eval tree: google_container_cluster.primary
+2020/09/07 00:26:28 [TRACE] eval: *terraform.EvalSequence
+2020/09/07 00:26:28 [TRACE] eval: *terraform.EvalGetProvider
+2020/09/07 00:26:28 [TRACE] eval: *terraform.EvalValidateResource
+2020/09/07 00:26:28 [TRACE] GRPCProvider: ValidateResourceTypeConfig
+2020/09/07 00:26:28 [TRACE] [walkValidate] Exiting eval tree: google_container_cluster.primary
+2020/09/07 00:26:28 [TRACE] vertex "google_container_cluster.primary": visit complete
+2020/09/07 00:26:28 [TRACE] dag/walk: visiting "provider[\"registry.terraform.io/hashicorp/google\"] (close)"
+2020/09/07 00:26:28 [TRACE] dag/walk: visiting "meta.count-boundary (EachMode fixup)"
+2020/09/07 00:26:28 [TRACE] vertex "meta.count-boundary (EachMode fixup)": starting visit (*terraform.NodeCountBoundary)
+2020/09/07 00:26:28 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/google\"] (close)": starting visit (*terraform.graphNodeCloseProvider)
+2020/09/07 00:26:28 [TRACE] vertex "meta.count-boundary (EachMode fixup)": evaluating
+2020/09/07 00:26:28 [TRACE] [walkValidate] Entering eval tree: meta.count-boundary (EachMode fixup)
+2020/09/07 00:26:28 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/google\"] (close)": evaluating
+2020/09/07 00:26:28 [TRACE] eval: *terraform.EvalCountFixZeroOneBoundaryGlobal
+2020/09/07 00:26:28 [TRACE] [walkValidate] Entering eval tree: provider["registry.terraform.io/hashicorp/google"] (close)
+2020/09/07 00:26:28 [TRACE] eval: *terraform.EvalCloseProvider
+2020/09/07 00:26:28 [TRACE] [walkValidate] Exiting eval tree: meta.count-boundary (EachMode fixup)
+2020/09/07 00:26:28 [TRACE] vertex "meta.count-boundary (EachMode fixup)": visit complete
+2020/09/07 00:26:28 [TRACE] GRPCProvider: Close
+2020-09-07T00:26:28.334Z [DEBUG] plugin: plugin process exited: path=.terraform/plugins/registry.terraform.io/hashicorp/google/2.5.1/linux_amd64/terraform-provider-google_v2.5.1_x4 pid=2703
+2020-09-07T00:26:28.335Z [DEBUG] plugin: plugin exited
+2020/09/07 00:26:28 [TRACE] [walkValidate] Exiting eval tree: provider["registry.terraform.io/hashicorp/google"] (close)
+2020/09/07 00:26:28 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/google\"] (close)": visit complete
+2020/09/07 00:26:28 [TRACE] dag/walk: visiting "root"
+2020/09/07 00:26:28 [TRACE] vertex "root": starting visit (*terraform.nodeCloseModule)
+2020/09/07 00:26:28 [TRACE] vertex "root": evaluating
+2020/09/07 00:26:28 [TRACE] [walkValidate] Entering eval tree: root
+2020/09/07 00:26:28 [TRACE] eval: *terraform.EvalSequence
+2020/09/07 00:26:28 [TRACE] eval: terraform.EvalNoop
+2020/09/07 00:26:28 [TRACE] [walkValidate] Exiting eval tree: root
+2020/09/07 00:26:28 [TRACE] vertex "root": visit complete
+2020/09/07 00:26:28 [INFO] backend/local: apply calling Refresh
+2020/09/07 00:26:28 [INFO] terraform: building graph: GraphTypeRefresh
+2020/09/07 00:26:28 [TRACE] No managed resources in state during refresh; skipping managed resource transformer
+2020/09/07 00:26:28 [TRACE] Executing graph transform *terraform.ConfigTransformer
+2020/09/07 00:26:28 [TRACE] ConfigTransformer: Starting for path: 
+2020/09/07 00:26:28 [TRACE] Completed graph transform *terraform.ConfigTransformer (no changes)
+2020/09/07 00:26:28 [TRACE] Executing graph transform *terraform.OrphanResourceInstanceTransformer
+2020/09/07 00:26:28 [TRACE] Completed graph transform *terraform.OrphanResourceInstanceTransformer (no changes)
+2020/09/07 00:26:28 [TRACE] Executing graph transform *terraform.StateTransformer
+2020/09/07 00:26:28 [TRACE] StateTransformer: state is empty, so nothing to do
+2020/09/07 00:26:28 [TRACE] Completed graph transform *terraform.StateTransformer (no changes)
+2020/09/07 00:26:28 [TRACE] Executing graph transform *terraform.AttachStateTransformer
+2020/09/07 00:26:28 [TRACE] Completed graph transform *terraform.AttachStateTransformer (no changes)
+2020/09/07 00:26:28 [TRACE] Executing graph transform *terraform.AttachResourceConfigTransformer
+2020/09/07 00:26:28 [TRACE] Completed graph transform *terraform.AttachResourceConfigTransformer (no changes)
+2020/09/07 00:26:28 [TRACE] Executing graph transform *terraform.RootVariableTransformer
+2020/09/07 00:26:28 [TRACE] Completed graph transform *terraform.RootVariableTransformer with new graph:
+  var.cluster_name - *terraform.NodeRootVariable
+  var.project_id - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+  var.zone - *terraform.NodeRootVariable
+  ------
+2020/09/07 00:26:28 [TRACE] Executing graph transform *terraform.LocalTransformer
+2020/09/07 00:26:28 [TRACE] Completed graph transform *terraform.LocalTransformer (no changes)
+2020/09/07 00:26:28 [TRACE] Executing graph transform *terraform.OutputTransformer
+2020/09/07 00:26:28 [TRACE] Completed graph transform *terraform.OutputTransformer (no changes)
+2020/09/07 00:26:28 [TRACE] Executing graph transform *terraform.ModuleVariableTransformer
+2020/09/07 00:26:28 [TRACE] Completed graph transform *terraform.ModuleVariableTransformer (no changes)
+2020/09/07 00:26:28 [TRACE] Executing graph transform *terraform.graphTransformerMulti
+2020/09/07 00:26:28 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderConfigTransformer
+2020/09/07 00:26:28 [TRACE] ProviderConfigTransformer: attaching to "provider[\"registry.terraform.io/hashicorp/google\"]" provider configuration from providers.tf:1,1-18
+2020/09/07 00:26:28 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderConfigTransformer with new graph:
+  provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  var.cluster_name - *terraform.NodeRootVariable
+  var.project_id - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+  var.zone - *terraform.NodeRootVariable
+  ------
+2020/09/07 00:26:28 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.MissingProviderTransformer
+2020/09/07 00:26:28 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.MissingProviderTransformer (no changes)
+2020/09/07 00:26:28 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderTransformer
+2020/09/07 00:26:28 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderTransformer (no changes)
+2020/09/07 00:26:28 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.PruneProviderTransformer
+2020/09/07 00:26:28 [DEBUG] pruning unused provider["registry.terraform.io/hashicorp/google"]
+2020/09/07 00:26:28 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.PruneProviderTransformer with new graph:
+  var.cluster_name - *terraform.NodeRootVariable
+  var.project_id - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+  var.zone - *terraform.NodeRootVariable
+  ------
+2020/09/07 00:26:28 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ParentProviderTransformer
+2020/09/07 00:26:28 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ParentProviderTransformer (no changes)
+2020/09/07 00:26:28 [TRACE] Completed graph transform *terraform.graphTransformerMulti (no changes)
+2020/09/07 00:26:28 [TRACE] Executing graph transform *terraform.AttachSchemaTransformer
+2020/09/07 00:26:28 [TRACE] Completed graph transform *terraform.AttachSchemaTransformer (no changes)
+2020/09/07 00:26:28 [TRACE] Executing graph transform *terraform.ModuleExpansionTransformer
+2020/09/07 00:26:28 [TRACE] Completed graph transform *terraform.ModuleExpansionTransformer (no changes)
+2020/09/07 00:26:28 [TRACE] Executing graph transform *terraform.ReferenceTransformer
+2020/09/07 00:26:28 [DEBUG] ReferenceTransformer: "var.project_id" references: []
+2020/09/07 00:26:28 [DEBUG] ReferenceTransformer: "var.region" references: []
+2020/09/07 00:26:28 [DEBUG] ReferenceTransformer: "var.cluster_name" references: []
+2020/09/07 00:26:28 [DEBUG] ReferenceTransformer: "var.zone" references: []
+2020/09/07 00:26:28 [TRACE] Completed graph transform *terraform.ReferenceTransformer (no changes)
+2020/09/07 00:26:28 [TRACE] Executing graph transform *terraform.AttachDependenciesTransformer
+2020/09/07 00:26:28 [TRACE] Completed graph transform *terraform.AttachDependenciesTransformer (no changes)
+2020/09/07 00:26:28 [TRACE] Executing graph transform *terraform.attachDataResourceDependenciesTransformer
+2020/09/07 00:26:28 [TRACE] Completed graph transform *terraform.attachDataResourceDependenciesTransformer (no changes)
+2020/09/07 00:26:28 [TRACE] Executing graph transform *terraform.TargetsTransformer
+2020/09/07 00:26:28 [TRACE] Completed graph transform *terraform.TargetsTransformer (no changes)
+2020/09/07 00:26:28 [TRACE] Executing graph transform *terraform.CloseProviderTransformer
+2020/09/07 00:26:28 [TRACE] Completed graph transform *terraform.CloseProviderTransformer (no changes)
+2020/09/07 00:26:28 [TRACE] Executing graph transform *terraform.CloseRootModuleTransformer
+2020/09/07 00:26:28 [TRACE] Completed graph transform *terraform.CloseRootModuleTransformer with new graph:
+  root - *terraform.nodeCloseModule
+    var.cluster_name - *terraform.NodeRootVariable
+    var.project_id - *terraform.NodeRootVariable
+    var.region - *terraform.NodeRootVariable
+    var.zone - *terraform.NodeRootVariable
+  var.cluster_name - *terraform.NodeRootVariable
+  var.project_id - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+  var.zone - *terraform.NodeRootVariable
+  ------
+2020/09/07 00:26:28 [TRACE] Executing graph transform *terraform.TransitiveReductionTransformer
+2020/09/07 00:26:28 [TRACE] Completed graph transform *terraform.TransitiveReductionTransformer (no changes)
+2020/09/07 00:26:28 [DEBUG] Starting graph walk: walkRefresh
+2020/09/07 00:26:28 [TRACE] dag/walk: visiting "var.project_id"
+2020/09/07 00:26:28 [TRACE] vertex "var.project_id": starting visit (*terraform.NodeRootVariable)
+2020/09/07 00:26:28 [TRACE] vertex "var.project_id": evaluating
+2020/09/07 00:26:28 [TRACE] [walkRefresh] Entering eval tree: var.project_id
+2020/09/07 00:26:28 [TRACE] eval: *terraform.EvalSequence
+2020/09/07 00:26:28 [TRACE] [walkRefresh] Exiting eval tree: var.project_id
+2020/09/07 00:26:28 [TRACE] vertex "var.project_id": visit complete
+2020/09/07 00:26:28 [TRACE] dag/walk: visiting "var.region"
+2020/09/07 00:26:28 [TRACE] vertex "var.region": starting visit (*terraform.NodeRootVariable)
+2020/09/07 00:26:28 [TRACE] vertex "var.region": evaluating
+2020/09/07 00:26:28 [TRACE] [walkRefresh] Entering eval tree: var.region
+2020/09/07 00:26:28 [TRACE] eval: *terraform.EvalSequence
+2020/09/07 00:26:28 [TRACE] [walkRefresh] Exiting eval tree: var.region
+2020/09/07 00:26:28 [TRACE] vertex "var.region": visit complete
+2020/09/07 00:26:28 [TRACE] dag/walk: visiting "var.cluster_name"
+2020/09/07 00:26:28 [TRACE] vertex "var.cluster_name": starting visit (*terraform.NodeRootVariable)
+2020/09/07 00:26:28 [TRACE] vertex "var.cluster_name": evaluating
+2020/09/07 00:26:28 [TRACE] [walkRefresh] Entering eval tree: var.cluster_name
+2020/09/07 00:26:28 [TRACE] eval: *terraform.EvalSequence
+2020/09/07 00:26:28 [TRACE] [walkRefresh] Exiting eval tree: var.cluster_name
+2020/09/07 00:26:28 [TRACE] vertex "var.cluster_name": visit complete
+2020/09/07 00:26:28 [TRACE] dag/walk: visiting "var.zone"
+2020/09/07 00:26:28 [TRACE] vertex "var.zone": starting visit (*terraform.NodeRootVariable)
+2020/09/07 00:26:28 [TRACE] vertex "var.zone": evaluating
+2020/09/07 00:26:28 [TRACE] [walkRefresh] Entering eval tree: var.zone
+2020/09/07 00:26:28 [TRACE] eval: *terraform.EvalSequence
+2020/09/07 00:26:28 [TRACE] [walkRefresh] Exiting eval tree: var.zone
+2020/09/07 00:26:28 [TRACE] vertex "var.zone": visit complete
+2020/09/07 00:26:28 [TRACE] dag/walk: visiting "root"
+2020/09/07 00:26:28 [TRACE] vertex "root": starting visit (*terraform.nodeCloseModule)
+2020/09/07 00:26:28 [TRACE] vertex "root": evaluating
+2020/09/07 00:26:28 [TRACE] [walkRefresh] Entering eval tree: root
+2020/09/07 00:26:28 [TRACE] eval: *terraform.EvalSequence
+2020/09/07 00:26:28 [TRACE] eval: terraform.EvalNoop
+2020/09/07 00:26:28 [TRACE] [walkRefresh] Exiting eval tree: root
+2020/09/07 00:26:28 [TRACE] vertex "root": visit complete
+2020/09/07 00:26:28 [INFO] backend/local: apply calling Plan
+2020/09/07 00:26:28 [INFO] terraform: building graph: GraphTypePlan
+2020/09/07 00:26:28 [TRACE] Executing graph transform *terraform.ConfigTransformer
+2020/09/07 00:26:28 [TRACE] ConfigTransformer: Starting for path: 
+2020/09/07 00:26:28 [TRACE] Completed graph transform *terraform.ConfigTransformer with new graph:
+  google_container_cluster.primary (expand) - *terraform.nodeExpandPlannableResource
+  ------
+2020/09/07 00:26:28 [TRACE] Executing graph transform *terraform.LocalTransformer
+2020/09/07 00:26:28 [TRACE] Completed graph transform *terraform.LocalTransformer (no changes)
+2020/09/07 00:26:28 [TRACE] Executing graph transform *terraform.OutputTransformer
+2020/09/07 00:26:28 [TRACE] Completed graph transform *terraform.OutputTransformer (no changes)
+2020/09/07 00:26:28 [TRACE] Executing graph transform *terraform.OrphanResourceInstanceTransformer
+2020/09/07 00:26:28 [TRACE] Completed graph transform *terraform.OrphanResourceInstanceTransformer (no changes)
+2020/09/07 00:26:28 [TRACE] Executing graph transform *terraform.StateTransformer
+2020/09/07 00:26:28 [TRACE] StateTransformer: state is empty, so nothing to do
+2020/09/07 00:26:28 [TRACE] Completed graph transform *terraform.StateTransformer (no changes)
+2020/09/07 00:26:28 [TRACE] Executing graph transform *terraform.OrphanOutputTransformer
+2020/09/07 00:26:28 [TRACE] Completed graph transform *terraform.OrphanOutputTransformer (no changes)
+2020/09/07 00:26:28 [TRACE] Executing graph transform *terraform.AttachResourceConfigTransformer
+2020/09/07 00:26:28 [TRACE] AttachResourceConfigTransformer: attaching to "google_container_cluster.primary (expand)" (*terraform.nodeExpandPlannableResource) config from main.tf:1,1-46
+2020/09/07 00:26:28 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to google_container_cluster.primary (expand)
+2020/09/07 00:26:28 [TRACE] Completed graph transform *terraform.AttachResourceConfigTransformer (no changes)
+2020/09/07 00:26:28 [TRACE] Executing graph transform *terraform.AttachStateTransformer
+2020/09/07 00:26:28 [TRACE] Completed graph transform *terraform.AttachStateTransformer (no changes)
+2020/09/07 00:26:28 [TRACE] Executing graph transform *terraform.RootVariableTransformer
+2020/09/07 00:26:28 [TRACE] Completed graph transform *terraform.RootVariableTransformer with new graph:
+  google_container_cluster.primary (expand) - *terraform.nodeExpandPlannableResource
+  var.cluster_name - *terraform.NodeRootVariable
+  var.project_id - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+  var.zone - *terraform.NodeRootVariable
+  ------
+2020/09/07 00:26:28 [TRACE] Executing graph transform *terraform.MissingProvisionerTransformer
+2020/09/07 00:26:28 [TRACE] Completed graph transform *terraform.MissingProvisionerTransformer (no changes)
+2020/09/07 00:26:28 [TRACE] Executing graph transform *terraform.ProvisionerTransformer
+2020/09/07 00:26:28 [TRACE] Completed graph transform *terraform.ProvisionerTransformer (no changes)
+2020/09/07 00:26:28 [TRACE] Executing graph transform *terraform.ModuleVariableTransformer
+2020/09/07 00:26:28 [TRACE] Completed graph transform *terraform.ModuleVariableTransformer (no changes)
+2020/09/07 00:26:28 [TRACE] Executing graph transform *terraform.graphTransformerMulti
+2020/09/07 00:26:28 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderConfigTransformer
+2020/09/07 00:26:28 [TRACE] ProviderConfigTransformer: attaching to "provider[\"registry.terraform.io/hashicorp/google\"]" provider configuration from providers.tf:1,1-18
+2020/09/07 00:26:28 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderConfigTransformer with new graph:
+  google_container_cluster.primary (expand) - *terraform.nodeExpandPlannableResource
+  provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  var.cluster_name - *terraform.NodeRootVariable
+  var.project_id - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+  var.zone - *terraform.NodeRootVariable
+  ------
+2020/09/07 00:26:28 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.MissingProviderTransformer
+2020/09/07 00:26:28 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.MissingProviderTransformer (no changes)
+2020/09/07 00:26:28 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderTransformer
+2020/09/07 00:26:28 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/hashicorp/google"] serving google_container_cluster.primary (expand)
+2020/09/07 00:26:28 [DEBUG] ProviderTransformer: "google_container_cluster.primary (expand)" (*terraform.nodeExpandPlannableResource) needs provider["registry.terraform.io/hashicorp/google"]
+2020/09/07 00:26:28 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderTransformer with new graph:
+  google_container_cluster.primary (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  var.cluster_name - *terraform.NodeRootVariable
+  var.project_id - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+  var.zone - *terraform.NodeRootVariable
+  ------
+2020/09/07 00:26:28 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.PruneProviderTransformer
+2020/09/07 00:26:28 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.PruneProviderTransformer (no changes)
+2020/09/07 00:26:28 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ParentProviderTransformer
+2020/09/07 00:26:28 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ParentProviderTransformer (no changes)
+2020/09/07 00:26:28 [TRACE] Completed graph transform *terraform.graphTransformerMulti with new graph:
+  google_container_cluster.primary (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  var.cluster_name - *terraform.NodeRootVariable
+  var.project_id - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+  var.zone - *terraform.NodeRootVariable
+  ------
+2020/09/07 00:26:28 [TRACE] Executing graph transform *terraform.RemovedModuleTransformer
+2020/09/07 00:26:28 [TRACE] Completed graph transform *terraform.RemovedModuleTransformer (no changes)
+2020/09/07 00:26:28 [TRACE] Executing graph transform *terraform.AttachSchemaTransformer
+2020/09/07 00:26:28 [TRACE] AttachSchemaTransformer: attaching resource schema to google_container_cluster.primary (expand)
+2020/09/07 00:26:28 [TRACE] AttachSchemaTransformer: attaching provider config schema to provider["registry.terraform.io/hashicorp/google"]
+2020/09/07 00:26:28 [TRACE] Completed graph transform *terraform.AttachSchemaTransformer (no changes)
+2020/09/07 00:26:28 [TRACE] Executing graph transform *terraform.ModuleExpansionTransformer
+2020/09/07 00:26:28 [TRACE] Completed graph transform *terraform.ModuleExpansionTransformer (no changes)
+2020/09/07 00:26:28 [TRACE] Executing graph transform *terraform.ReferenceTransformer
+2020/09/07 00:26:28 [DEBUG] ReferenceTransformer: "var.cluster_name" references: []
+2020/09/07 00:26:28 [DEBUG] ReferenceTransformer: "var.zone" references: []
+2020/09/07 00:26:28 [DEBUG] ReferenceTransformer: "provider[\"registry.terraform.io/hashicorp/google\"]" references: []
+2020/09/07 00:26:28 [DEBUG] ReferenceTransformer: "google_container_cluster.primary (expand)" references: []
+2020/09/07 00:26:28 [DEBUG] ReferenceTransformer: "var.project_id" references: []
+2020/09/07 00:26:28 [DEBUG] ReferenceTransformer: "var.region" references: []
+2020/09/07 00:26:28 [TRACE] Completed graph transform *terraform.ReferenceTransformer (no changes)
+2020/09/07 00:26:28 [TRACE] Executing graph transform *terraform.attachDataResourceDependenciesTransformer
+2020/09/07 00:26:28 [TRACE] Completed graph transform *terraform.attachDataResourceDependenciesTransformer (no changes)
+2020/09/07 00:26:28 [TRACE] Executing graph transform *terraform.TargetsTransformer
+2020/09/07 00:26:28 [TRACE] Completed graph transform *terraform.TargetsTransformer (no changes)
+2020/09/07 00:26:28 [TRACE] Executing graph transform *terraform.ForcedCBDTransformer
+2020/09/07 00:26:28 [TRACE] ForcedCBDTransformer: "google_container_cluster.primary (expand)" (*terraform.nodeExpandPlannableResource) has no CBD descendent, so skipping
+2020/09/07 00:26:28 [TRACE] Completed graph transform *terraform.ForcedCBDTransformer (no changes)
+2020/09/07 00:26:28 [TRACE] Executing graph transform *terraform.CountBoundaryTransformer
+2020/09/07 00:26:28 [TRACE] Completed graph transform *terraform.CountBoundaryTransformer with new graph:
+  google_container_cluster.primary (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    google_container_cluster.primary (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+    var.cluster_name - *terraform.NodeRootVariable
+    var.project_id - *terraform.NodeRootVariable
+    var.region - *terraform.NodeRootVariable
+    var.zone - *terraform.NodeRootVariable
+  provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  var.cluster_name - *terraform.NodeRootVariable
+  var.project_id - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+  var.zone - *terraform.NodeRootVariable
+  ------
+2020/09/07 00:26:28 [TRACE] Executing graph transform *terraform.CloseProviderTransformer
+2020/09/07 00:26:28 [TRACE] Completed graph transform *terraform.CloseProviderTransformer with new graph:
+  google_container_cluster.primary (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    google_container_cluster.primary (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+    var.cluster_name - *terraform.NodeRootVariable
+    var.project_id - *terraform.NodeRootVariable
+    var.region - *terraform.NodeRootVariable
+    var.zone - *terraform.NodeRootVariable
+  provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/google"] (close) - *terraform.graphNodeCloseProvider
+    google_container_cluster.primary (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  var.cluster_name - *terraform.NodeRootVariable
+  var.project_id - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+  var.zone - *terraform.NodeRootVariable
+  ------
+2020/09/07 00:26:28 [TRACE] Executing graph transform *terraform.CloseProvisionerTransformer
+2020/09/07 00:26:28 [TRACE] Completed graph transform *terraform.CloseProvisionerTransformer (no changes)
+2020/09/07 00:26:28 [TRACE] Executing graph transform *terraform.CloseRootModuleTransformer
+2020/09/07 00:26:28 [TRACE] Completed graph transform *terraform.CloseRootModuleTransformer with new graph:
+  google_container_cluster.primary (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    google_container_cluster.primary (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+    var.cluster_name - *terraform.NodeRootVariable
+    var.project_id - *terraform.NodeRootVariable
+    var.region - *terraform.NodeRootVariable
+    var.zone - *terraform.NodeRootVariable
+  provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/google"] (close) - *terraform.graphNodeCloseProvider
+    google_container_cluster.primary (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  root - *terraform.nodeCloseModule
+    meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    provider["registry.terraform.io/hashicorp/google"] (close) - *terraform.graphNodeCloseProvider
+  var.cluster_name - *terraform.NodeRootVariable
+  var.project_id - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+  var.zone - *terraform.NodeRootVariable
+  ------
+2020/09/07 00:26:28 [TRACE] Executing graph transform *terraform.TransitiveReductionTransformer
+2020/09/07 00:26:28 [TRACE] Completed graph transform *terraform.TransitiveReductionTransformer with new graph:
+  google_container_cluster.primary (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    google_container_cluster.primary (expand) - *terraform.nodeExpandPlannableResource
+    var.cluster_name - *terraform.NodeRootVariable
+    var.project_id - *terraform.NodeRootVariable
+    var.region - *terraform.NodeRootVariable
+    var.zone - *terraform.NodeRootVariable
+  provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/google"] (close) - *terraform.graphNodeCloseProvider
+    google_container_cluster.primary (expand) - *terraform.nodeExpandPlannableResource
+  root - *terraform.nodeCloseModule
+    meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    provider["registry.terraform.io/hashicorp/google"] (close) - *terraform.graphNodeCloseProvider
+  var.cluster_name - *terraform.NodeRootVariable
+  var.project_id - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+  var.zone - *terraform.NodeRootVariable
+  ------
+2020/09/07 00:26:28 [DEBUG] Starting graph walk: walkPlan
+2020/09/07 00:26:28 [TRACE] dag/walk: visiting "var.zone"
+2020/09/07 00:26:28 [TRACE] vertex "var.zone": starting visit (*terraform.NodeRootVariable)
+2020/09/07 00:26:28 [TRACE] vertex "var.zone": evaluating
+2020/09/07 00:26:28 [TRACE] [walkPlan] Entering eval tree: var.zone
+2020/09/07 00:26:28 [TRACE] eval: *terraform.EvalSequence
+2020/09/07 00:26:28 [TRACE] [walkPlan] Exiting eval tree: var.zone
+2020/09/07 00:26:28 [TRACE] vertex "var.zone": visit complete
+2020/09/07 00:26:28 [TRACE] dag/walk: visiting "var.region"
+2020/09/07 00:26:28 [TRACE] vertex "var.region": starting visit (*terraform.NodeRootVariable)
+2020/09/07 00:26:28 [TRACE] vertex "var.region": evaluating
+2020/09/07 00:26:28 [TRACE] [walkPlan] Entering eval tree: var.region
+2020/09/07 00:26:28 [TRACE] eval: *terraform.EvalSequence
+2020/09/07 00:26:28 [TRACE] [walkPlan] Exiting eval tree: var.region
+2020/09/07 00:26:28 [TRACE] vertex "var.region": visit complete
+2020/09/07 00:26:28 [TRACE] dag/walk: visiting "var.cluster_name"
+2020/09/07 00:26:28 [TRACE] vertex "var.cluster_name": starting visit (*terraform.NodeRootVariable)
+2020/09/07 00:26:28 [TRACE] vertex "var.cluster_name": evaluating
+2020/09/07 00:26:28 [TRACE] [walkPlan] Entering eval tree: var.cluster_name
+2020/09/07 00:26:28 [TRACE] eval: *terraform.EvalSequence
+2020/09/07 00:26:28 [TRACE] [walkPlan] Exiting eval tree: var.cluster_name
+2020/09/07 00:26:28 [TRACE] vertex "var.cluster_name": visit complete
+2020/09/07 00:26:28 [TRACE] dag/walk: visiting "var.project_id"
+2020/09/07 00:26:28 [TRACE] vertex "var.project_id": starting visit (*terraform.NodeRootVariable)
+2020/09/07 00:26:28 [TRACE] vertex "var.project_id": evaluating
+2020/09/07 00:26:28 [TRACE] [walkPlan] Entering eval tree: var.project_id
+2020/09/07 00:26:28 [TRACE] eval: *terraform.EvalSequence
+2020/09/07 00:26:28 [TRACE] [walkPlan] Exiting eval tree: var.project_id
+2020/09/07 00:26:28 [TRACE] vertex "var.project_id": visit complete
+2020/09/07 00:26:28 [TRACE] dag/walk: visiting "provider[\"registry.terraform.io/hashicorp/google\"]"
+2020/09/07 00:26:28 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/google\"]": starting visit (*terraform.NodeApplyableProvider)
+2020/09/07 00:26:28 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/google\"]": evaluating
+2020/09/07 00:26:28 [TRACE] [walkPlan] Entering eval tree: provider["registry.terraform.io/hashicorp/google"]
+2020/09/07 00:26:28 [TRACE] eval: *terraform.EvalSequence
+2020/09/07 00:26:28 [TRACE] eval: *terraform.EvalInitProvider
+2020-09-07T00:26:28.338Z [INFO]  plugin: configuring client automatic mTLS
+2020-09-07T00:26:28.376Z [DEBUG] plugin: starting plugin: path=.terraform/plugins/registry.terraform.io/hashicorp/google/2.5.1/linux_amd64/terraform-provider-google_v2.5.1_x4 args=[.terraform/plugins/registry.terraform.io/hashicorp/google/2.5.1/linux_amd64/terraform-provider-google_v2.5.1_x4]
+2020-09-07T00:26:28.377Z [DEBUG] plugin: plugin started: path=.terraform/plugins/registry.terraform.io/hashicorp/google/2.5.1/linux_amd64/terraform-provider-google_v2.5.1_x4 pid=2713
+2020-09-07T00:26:28.377Z [DEBUG] plugin: waiting for RPC address: path=.terraform/plugins/registry.terraform.io/hashicorp/google/2.5.1/linux_amd64/terraform-provider-google_v2.5.1_x4
+2020-09-07T00:26:28.396Z [INFO]  plugin.terraform-provider-google_v2.5.1_x4: configuring server automatic mTLS: timestamp=2020-09-07T00:26:28.396Z
+2020-09-07T00:26:28.436Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: plugin address: address=/tmp/plugin418079918 network=unix timestamp=2020-09-07T00:26:28.436Z
+2020-09-07T00:26:28.436Z [DEBUG] plugin: using plugin: version=5
+2020/09/07 00:26:28 [TRACE] BuiltinEvalContext: Initialized "provider[\"registry.terraform.io/hashicorp/google\"]" provider for provider["registry.terraform.io/hashicorp/google"]
+2020/09/07 00:26:28 [TRACE] eval: terraform.EvalNoop
+2020/09/07 00:26:28 [TRACE] eval: *terraform.EvalOpFilter
+2020/09/07 00:26:28 [TRACE] eval: *terraform.EvalSequence
+2020/09/07 00:26:28 [TRACE] eval: *terraform.EvalGetProvider
+2020/09/07 00:26:28 [TRACE] eval: *terraform.EvalOpFilter
+2020/09/07 00:26:28 [TRACE] eval: *terraform.EvalSequence
+2020/09/07 00:26:28 [TRACE] eval: *terraform.EvalConfigProvider
+2020/09/07 00:26:28 [TRACE] buildProviderConfig for provider["registry.terraform.io/hashicorp/google"]: using explicit config only
+2020/09/07 00:26:28 [TRACE] GRPCProvider: GetSchema
+2020-09-07T00:26:28.527Z [TRACE] plugin.stdio: waiting for stdio data
+2020-09-07T00:26:28.528Z [WARN]  plugin.stdio: received EOF, stopping recv loop: err="rpc error: code = Unimplemented desc = unknown service plugin.GRPCStdio"
+2020/09/07 00:26:28 [TRACE] No provider meta schema returned
+2020/09/07 00:26:28 [TRACE] GRPCProvider: Configure
+2020-09-07T00:26:28.577Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: 2020/09/07 00:26:28 [INFO] Authenticating using DefaultClient...
+2020-09-07T00:26:28.577Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: 2020/09/07 00:26:28 [INFO]   -- Scopes: [https://www.googleapis.com/auth/compute https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/ndev.clouddns.readwrite https://www.googleapis.com/auth/devstorage.full_control]
+2020-09-07T00:26:28.579Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: 2020/09/07 00:26:28 [INFO] Instantiating GCE client...
+2020-09-07T00:26:28.579Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: 2020/09/07 00:26:28 [INFO] Instantiating GCE Beta client...
+2020-09-07T00:26:28.579Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: 2020/09/07 00:26:28 [INFO] Instantiating GKE client...
+2020-09-07T00:26:28.579Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: 2020/09/07 00:26:28 [INFO] Instantiating GKE Beta client...
+2020-09-07T00:26:28.579Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: 2020/09/07 00:26:28 [INFO] Instantiating Google Cloud DNS client...
+2020-09-07T00:26:28.579Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: 2020/09/07 00:26:28 [INFO] Instantiating Google Cloud DNS Beta client...
+2020-09-07T00:26:28.580Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: 2020/09/07 00:26:28 [INFO] Instantiating Google Cloud KMS Client...
+2020-09-07T00:26:28.580Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: 2020/09/07 00:26:28 [INFO] Instantiating Google Stackdriver Logging client...
+2020-09-07T00:26:28.580Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: 2020/09/07 00:26:28 [INFO] Instantiating Google Storage Client...
+2020-09-07T00:26:28.580Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: 2020/09/07 00:26:28 [INFO] Instantiating Google SqlAdmin Client...
+2020-09-07T00:26:28.580Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: 2020/09/07 00:26:28 [INFO] Instantiating Google Pubsub Client...
+2020-09-07T00:26:28.580Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: 2020/09/07 00:26:28 [INFO] Instantiating Google Dataflow Client...
+2020-09-07T00:26:28.580Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: 2020/09/07 00:26:28 [INFO] Instantiating Google Cloud ResourceManager Client...
+2020-09-07T00:26:28.580Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: 2020/09/07 00:26:28 [INFO] Instantiating Google Cloud ResourceManager V Client...
+2020-09-07T00:26:28.580Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: 2020/09/07 00:26:28 [INFO] Instantiating Google Cloud Runtimeconfig Client...
+2020-09-07T00:26:28.580Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: 2020/09/07 00:26:28 [INFO] Instantiating Google Cloud IAM Client...
+2020-09-07T00:26:28.580Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: 2020/09/07 00:26:28 [INFO] Instantiating Google Cloud IAMCredentials Client...
+2020-09-07T00:26:28.580Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: 2020/09/07 00:26:28 [INFO] Instantiating Google Cloud Service Management Client...
+2020-09-07T00:26:28.580Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: 2020/09/07 00:26:28 [INFO] Instantiating Google Cloud Service Usage Client...
+2020-09-07T00:26:28.580Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: 2020/09/07 00:26:28 [INFO] Instantiating Google Cloud Billing Client...
+2020-09-07T00:26:28.580Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: 2020/09/07 00:26:28 [INFO] Instantiating Google Cloud Build Client...
+2020-09-07T00:26:28.580Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: 2020/09/07 00:26:28 [INFO] Instantiating Google Cloud BigQuery Client...
+2020-09-07T00:26:28.580Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: 2020/09/07 00:26:28 [INFO] Instantiating Google Cloud CloudFunctions Client...
+2020-09-07T00:26:28.580Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: 2020/09/07 00:26:28 [INFO] Instantiating Google Cloud Source Repo Client...
+2020-09-07T00:26:28.580Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: 2020/09/07 00:26:28 [INFO] Instantiating Google Cloud Spanner Client...
+2020-09-07T00:26:28.580Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: 2020/09/07 00:26:28 [INFO] Instantiating Google Cloud Dataproc Client...
+2020-09-07T00:26:28.580Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: 2020/09/07 00:26:28 [INFO] Instantiating Google Cloud IoT Core Client...
+2020-09-07T00:26:28.580Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: 2020/09/07 00:26:28 [INFO] Instantiating App Engine Client...
+2020-09-07T00:26:28.580Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: 2020/09/07 00:26:28 [INFO] Instantiating Cloud Composer Client...
+2020-09-07T00:26:28.580Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: 2020/09/07 00:26:28 [INFO] Instantiating Google Cloud Storage Transfer Client...
+2020/09/07 00:26:28 [TRACE] eval: terraform.EvalNoop
+2020/09/07 00:26:28 [TRACE] [walkPlan] Exiting eval tree: provider["registry.terraform.io/hashicorp/google"]
+2020/09/07 00:26:28 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/google\"]": visit complete
+2020/09/07 00:26:28 [TRACE] dag/walk: visiting "google_container_cluster.primary (expand)"
+2020/09/07 00:26:28 [TRACE] vertex "google_container_cluster.primary (expand)": starting visit (*terraform.nodeExpandPlannableResource)
+2020/09/07 00:26:28 [TRACE] vertex "google_container_cluster.primary (expand)": expanding dynamic subgraph
+2020/09/07 00:26:28 [TRACE] vertex "google_container_cluster.primary (expand)": entering dynamic subgraph
+2020/09/07 00:26:28 [TRACE] dag/walk: visiting "google_container_cluster.primary"
+2020/09/07 00:26:28 [TRACE] vertex "google_container_cluster.primary": starting visit (*terraform.NodePlannableResource)
+2020/09/07 00:26:28 [TRACE] vertex "google_container_cluster.primary": evaluating
+2020/09/07 00:26:28 [TRACE] [walkPlan] Entering eval tree: google_container_cluster.primary
+2020/09/07 00:26:28 [TRACE] eval: *terraform.EvalWriteResourceState
+2020/09/07 00:26:28 [TRACE] [walkPlan] Exiting eval tree: google_container_cluster.primary
+2020/09/07 00:26:28 [TRACE] vertex "google_container_cluster.primary": expanding dynamic subgraph
+2020/09/07 00:26:28 [TRACE] Executing graph transform *terraform.ResourceCountTransformer
+2020/09/07 00:26:28 [TRACE] ResourceCountTransformer: adding google_container_cluster.primary as *terraform.NodePlannableResourceInstance
+2020/09/07 00:26:28 [TRACE] Completed graph transform *terraform.ResourceCountTransformer with new graph:
+  google_container_cluster.primary - *terraform.NodePlannableResourceInstance
+  ------
+2020/09/07 00:26:28 [TRACE] Executing graph transform *terraform.OrphanResourceInstanceCountTransformer
+2020/09/07 00:26:28 [TRACE] Completed graph transform *terraform.OrphanResourceInstanceCountTransformer (no changes)
+2020/09/07 00:26:28 [TRACE] Executing graph transform *terraform.AttachStateTransformer
+2020/09/07 00:26:28 [DEBUG] Resource instance state not found for node "google_container_cluster.primary", instance google_container_cluster.primary
+2020/09/07 00:26:28 [TRACE] Completed graph transform *terraform.AttachStateTransformer (no changes)
+2020/09/07 00:26:28 [TRACE] Executing graph transform *terraform.TargetsTransformer
+2020/09/07 00:26:28 [TRACE] Completed graph transform *terraform.TargetsTransformer (no changes)
+2020/09/07 00:26:28 [TRACE] Executing graph transform *terraform.ReferenceTransformer
+2020/09/07 00:26:28 [DEBUG] ReferenceTransformer: "google_container_cluster.primary" references: []
+2020/09/07 00:26:28 [TRACE] Completed graph transform *terraform.ReferenceTransformer (no changes)
+2020/09/07 00:26:28 [TRACE] Executing graph transform *terraform.RootTransformer
+2020/09/07 00:26:28 [TRACE] Completed graph transform *terraform.RootTransformer (no changes)
+2020/09/07 00:26:28 [TRACE] vertex "google_container_cluster.primary": entering dynamic subgraph
+2020/09/07 00:26:28 [TRACE] dag/walk: visiting "google_container_cluster.primary"
+2020/09/07 00:26:28 [TRACE] vertex "google_container_cluster.primary": starting visit (*terraform.NodePlannableResourceInstance)
+2020/09/07 00:26:28 [TRACE] vertex "google_container_cluster.primary": evaluating
+2020/09/07 00:26:28 [TRACE] [walkPlan] Entering eval tree: google_container_cluster.primary
+2020/09/07 00:26:28 [TRACE] eval: *terraform.EvalSequence
+2020/09/07 00:26:28 [TRACE] eval: *terraform.EvalGetProvider
+2020/09/07 00:26:28 [TRACE] eval: *terraform.EvalReadState
+2020/09/07 00:26:28 [TRACE] EvalReadState: reading state for google_container_cluster.primary
+2020/09/07 00:26:28 [TRACE] EvalReadState: no state present for google_container_cluster.primary
+2020/09/07 00:26:28 [TRACE] eval: *terraform.EvalValidateSelfRef
+2020/09/07 00:26:28 [TRACE] eval: *terraform.EvalDiff
+2020/09/07 00:26:28 [TRACE] Re-validating config for "google_container_cluster.primary"
+2020/09/07 00:26:28 [TRACE] GRPCProvider: ValidateResourceTypeConfig
+2020/09/07 00:26:28 [TRACE] GRPCProvider: PlanResourceChange
+2020/09/07 00:26:28 [WARN] Provider "registry.terraform.io/hashicorp/google" produced an invalid plan for google_container_cluster.primary, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .enable_kubernetes_alpha: planned value cty.False does not match config value cty.NullVal(cty.Bool)
+      - .enable_legacy_abac: planned value cty.False does not match config value cty.NullVal(cty.Bool)
+      - .network: planned value cty.StringVal("default") does not match config value cty.NullVal(cty.String)
+      - .addons_config: attribute representing nested block must not be unknown itself; set nested attribute values to unknown instead
+      - .node_config[0].preemptible: planned value cty.False does not match config value cty.NullVal(cty.Bool)
+      - .master_auth[0].password: sensitive planned value does not match config value
+      - .master_auth[0].username: planned value cty.NullVal(cty.String) does not match config value cty.StringVal("")
+      - .network_policy: attribute representing nested block must not be unknown itself; set nested attribute values to unknown instead
+      - .node_pool: attribute representing nested block must not be unknown itself; set nested attribute values to unknown instead
+2020/09/07 00:26:28 [TRACE] eval: *terraform.EvalCheckPreventDestroy
+2020/09/07 00:26:28 [TRACE] eval: *terraform.EvalWriteState
+2020/09/07 00:26:28 [TRACE] EvalWriteState: writing current state object for google_container_cluster.primary
+2020/09/07 00:26:28 [TRACE] eval: *terraform.EvalWriteDiff
+2020/09/07 00:26:28 [TRACE] EvalWriteDiff: recorded Create change for google_container_cluster.primary
+2020/09/07 00:26:28 [TRACE] [walkPlan] Exiting eval tree: google_container_cluster.primary
+2020/09/07 00:26:28 [TRACE] vertex "google_container_cluster.primary": visit complete
+2020/09/07 00:26:28 [TRACE] vertex "google_container_cluster.primary": dynamic subgraph completed successfully
+2020/09/07 00:26:28 [TRACE] vertex "google_container_cluster.primary": visit complete
+2020/09/07 00:26:28 [TRACE] vertex "google_container_cluster.primary (expand)": dynamic subgraph completed successfully
+2020/09/07 00:26:28 [TRACE] vertex "google_container_cluster.primary (expand)": visit complete
+2020/09/07 00:26:28 [TRACE] dag/walk: visiting "provider[\"registry.terraform.io/hashicorp/google\"] (close)"
+2020/09/07 00:26:28 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/google\"] (close)": starting visit (*terraform.graphNodeCloseProvider)
+2020/09/07 00:26:28 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/google\"] (close)": evaluating
+2020/09/07 00:26:28 [TRACE] [walkPlan] Entering eval tree: provider["registry.terraform.io/hashicorp/google"] (close)
+2020/09/07 00:26:28 [TRACE] eval: *terraform.EvalCloseProvider
+2020/09/07 00:26:28 [TRACE] GRPCProvider: Close
+2020/09/07 00:26:28 [TRACE] dag/walk: visiting "meta.count-boundary (EachMode fixup)"
+2020/09/07 00:26:28 [TRACE] vertex "meta.count-boundary (EachMode fixup)": starting visit (*terraform.NodeCountBoundary)
+2020/09/07 00:26:28 [TRACE] vertex "meta.count-boundary (EachMode fixup)": evaluating
+2020/09/07 00:26:28 [TRACE] [walkPlan] Entering eval tree: meta.count-boundary (EachMode fixup)
+2020/09/07 00:26:28 [TRACE] eval: *terraform.EvalCountFixZeroOneBoundaryGlobal
+2020/09/07 00:26:28 [TRACE] [walkPlan] Exiting eval tree: meta.count-boundary (EachMode fixup)
+2020/09/07 00:26:28 [TRACE] vertex "meta.count-boundary (EachMode fixup)": visit complete
+2020-09-07T00:26:28.626Z [DEBUG] plugin: plugin process exited: path=.terraform/plugins/registry.terraform.io/hashicorp/google/2.5.1/linux_amd64/terraform-provider-google_v2.5.1_x4 pid=2713
+2020-09-07T00:26:28.626Z [DEBUG] plugin: plugin exited
+2020/09/07 00:26:28 [TRACE] [walkPlan] Exiting eval tree: provider["registry.terraform.io/hashicorp/google"] (close)
+2020/09/07 00:26:28 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/google\"] (close)": visit complete
+2020/09/07 00:26:28 [TRACE] dag/walk: visiting "root"
+2020/09/07 00:26:28 [TRACE] vertex "root": starting visit (*terraform.nodeCloseModule)
+2020/09/07 00:26:28 [TRACE] vertex "root": evaluating
+2020/09/07 00:26:28 [TRACE] [walkPlan] Entering eval tree: root
+2020/09/07 00:26:28 [TRACE] eval: *terraform.EvalSequence
+2020/09/07 00:26:28 [TRACE] eval: terraform.EvalNoop
+2020/09/07 00:26:28 [TRACE] [walkPlan] Exiting eval tree: root
+2020/09/07 00:26:28 [TRACE] vertex "root": visit complete
+2020/09/07 00:26:28 [DEBUG] command: asking for input: "Do you want to perform these actions?"
+2020/09/07 00:26:30 [INFO] backend/local: apply calling Apply
+2020/09/07 00:26:30 [INFO] terraform: building graph: GraphTypeApply
+2020/09/07 00:26:30 [TRACE] Executing graph transform *terraform.ConfigTransformer
+2020/09/07 00:26:30 [TRACE] ConfigTransformer: Starting for path: 
+2020/09/07 00:26:30 [TRACE] Completed graph transform *terraform.ConfigTransformer with new graph:
+  google_container_cluster.primary (expand) - *terraform.nodeExpandApplyableResource
+  ------
+2020/09/07 00:26:30 [TRACE] Executing graph transform *terraform.DiffTransformer
+2020/09/07 00:26:30 [TRACE] DiffTransformer starting
+2020/09/07 00:26:30 [TRACE] DiffTransformer: found Create change for google_container_cluster.primary 
+2020/09/07 00:26:30 [TRACE] DiffTransformer: google_container_cluster.primary will be represented by google_container_cluster.primary
+2020/09/07 00:26:30 [TRACE] DiffTransformer complete
+2020/09/07 00:26:30 [TRACE] Completed graph transform *terraform.DiffTransformer with new graph:
+  google_container_cluster.primary - *terraform.NodeApplyableResourceInstance
+    google_container_cluster.primary (expand) - *terraform.nodeExpandApplyableResource
+  google_container_cluster.primary (expand) - *terraform.nodeExpandApplyableResource
+  ------
+2020/09/07 00:26:30 [TRACE] Executing graph transform *terraform.OrphanOutputTransformer
+2020/09/07 00:26:30 [TRACE] Completed graph transform *terraform.OrphanOutputTransformer (no changes)
+2020/09/07 00:26:30 [TRACE] Executing graph transform *terraform.AttachResourceConfigTransformer
+2020/09/07 00:26:30 [TRACE] AttachResourceConfigTransformer: attaching to "google_container_cluster.primary (expand)" (*terraform.nodeExpandApplyableResource) config from main.tf:1,1-46
+2020/09/07 00:26:30 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to google_container_cluster.primary (expand)
+2020/09/07 00:26:30 [TRACE] AttachResourceConfigTransformer: attaching to "google_container_cluster.primary" (*terraform.NodeApplyableResourceInstance) config from main.tf:1,1-46
+2020/09/07 00:26:30 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to google_container_cluster.primary
+2020/09/07 00:26:30 [TRACE] Completed graph transform *terraform.AttachResourceConfigTransformer (no changes)
+2020/09/07 00:26:30 [TRACE] Executing graph transform *terraform.AttachStateTransformer
+2020/09/07 00:26:30 [DEBUG] Resource state not found for node "google_container_cluster.primary", instance google_container_cluster.primary
+2020/09/07 00:26:30 [TRACE] Completed graph transform *terraform.AttachStateTransformer (no changes)
+2020/09/07 00:26:30 [TRACE] Executing graph transform *terraform.MissingProvisionerTransformer
+2020/09/07 00:26:30 [TRACE] Completed graph transform *terraform.MissingProvisionerTransformer (no changes)
+2020/09/07 00:26:30 [TRACE] Executing graph transform *terraform.ProvisionerTransformer
+2020/09/07 00:26:30 [TRACE] Completed graph transform *terraform.ProvisionerTransformer (no changes)
+2020/09/07 00:26:30 [TRACE] Executing graph transform *terraform.RootVariableTransformer
+2020/09/07 00:26:30 [TRACE] Completed graph transform *terraform.RootVariableTransformer with new graph:
+  google_container_cluster.primary - *terraform.NodeApplyableResourceInstance
+    google_container_cluster.primary (expand) - *terraform.nodeExpandApplyableResource
+  google_container_cluster.primary (expand) - *terraform.nodeExpandApplyableResource
+  var.cluster_name - *terraform.NodeRootVariable
+  var.project_id - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+  var.zone - *terraform.NodeRootVariable
+  ------
+2020/09/07 00:26:30 [TRACE] Executing graph transform *terraform.LocalTransformer
+2020/09/07 00:26:30 [TRACE] Completed graph transform *terraform.LocalTransformer (no changes)
+2020/09/07 00:26:30 [TRACE] Executing graph transform *terraform.OutputTransformer
+2020/09/07 00:26:30 [TRACE] Completed graph transform *terraform.OutputTransformer (no changes)
+2020/09/07 00:26:30 [TRACE] Executing graph transform *terraform.ModuleVariableTransformer
+2020/09/07 00:26:30 [TRACE] Completed graph transform *terraform.ModuleVariableTransformer (no changes)
+2020/09/07 00:26:30 [TRACE] Executing graph transform *terraform.graphTransformerMulti
+2020/09/07 00:26:30 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderConfigTransformer
+2020/09/07 00:26:30 [TRACE] ProviderConfigTransformer: attaching to "provider[\"registry.terraform.io/hashicorp/google\"]" provider configuration from providers.tf:1,1-18
+2020/09/07 00:26:30 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderConfigTransformer with new graph:
+  google_container_cluster.primary - *terraform.NodeApplyableResourceInstance
+    google_container_cluster.primary (expand) - *terraform.nodeExpandApplyableResource
+  google_container_cluster.primary (expand) - *terraform.nodeExpandApplyableResource
+  provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  var.cluster_name - *terraform.NodeRootVariable
+  var.project_id - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+  var.zone - *terraform.NodeRootVariable
+  ------
+2020/09/07 00:26:30 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.MissingProviderTransformer
+2020/09/07 00:26:30 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.MissingProviderTransformer (no changes)
+2020/09/07 00:26:30 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderTransformer
+2020/09/07 00:26:30 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/hashicorp/google"] serving google_container_cluster.primary (expand)
+2020/09/07 00:26:30 [DEBUG] ProviderTransformer: "google_container_cluster.primary (expand)" (*terraform.nodeExpandApplyableResource) needs provider["registry.terraform.io/hashicorp/google"]
+2020/09/07 00:26:30 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/hashicorp/google"] serving google_container_cluster.primary
+2020/09/07 00:26:30 [DEBUG] ProviderTransformer: "google_container_cluster.primary" (*terraform.NodeApplyableResourceInstance) needs provider["registry.terraform.io/hashicorp/google"]
+2020/09/07 00:26:30 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderTransformer with new graph:
+  google_container_cluster.primary - *terraform.NodeApplyableResourceInstance
+    google_container_cluster.primary (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  google_container_cluster.primary (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  var.cluster_name - *terraform.NodeRootVariable
+  var.project_id - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+  var.zone - *terraform.NodeRootVariable
+  ------
+2020/09/07 00:26:30 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.PruneProviderTransformer
+2020/09/07 00:26:30 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.PruneProviderTransformer (no changes)
+2020/09/07 00:26:30 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ParentProviderTransformer
+2020/09/07 00:26:30 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ParentProviderTransformer (no changes)
+2020/09/07 00:26:30 [TRACE] Completed graph transform *terraform.graphTransformerMulti with new graph:
+  google_container_cluster.primary - *terraform.NodeApplyableResourceInstance
+    google_container_cluster.primary (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  google_container_cluster.primary (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  var.cluster_name - *terraform.NodeRootVariable
+  var.project_id - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+  var.zone - *terraform.NodeRootVariable
+  ------
+2020/09/07 00:26:30 [TRACE] Executing graph transform *terraform.RemovedModuleTransformer
+2020/09/07 00:26:30 [TRACE] Completed graph transform *terraform.RemovedModuleTransformer (no changes)
+2020/09/07 00:26:30 [TRACE] Executing graph transform *terraform.AttachSchemaTransformer
+2020/09/07 00:26:30 [TRACE] AttachSchemaTransformer: attaching resource schema to google_container_cluster.primary (expand)
+2020/09/07 00:26:30 [TRACE] AttachSchemaTransformer: attaching resource schema to google_container_cluster.primary
+2020/09/07 00:26:30 [TRACE] AttachSchemaTransformer: attaching provider config schema to provider["registry.terraform.io/hashicorp/google"]
+2020/09/07 00:26:30 [TRACE] Completed graph transform *terraform.AttachSchemaTransformer (no changes)
+2020/09/07 00:26:30 [TRACE] Executing graph transform *terraform.ModuleExpansionTransformer
+2020/09/07 00:26:30 [TRACE] Completed graph transform *terraform.ModuleExpansionTransformer (no changes)
+2020/09/07 00:26:30 [TRACE] Executing graph transform *terraform.ReferenceTransformer
+2020/09/07 00:26:30 [DEBUG] ReferenceTransformer: "google_container_cluster.primary (expand)" references: []
+2020/09/07 00:26:30 [DEBUG] ReferenceTransformer: "google_container_cluster.primary" references: []
+2020/09/07 00:26:30 [DEBUG] ReferenceTransformer: "var.project_id" references: []
+2020/09/07 00:26:30 [DEBUG] ReferenceTransformer: "var.region" references: []
+2020/09/07 00:26:30 [DEBUG] ReferenceTransformer: "var.cluster_name" references: []
+2020/09/07 00:26:30 [DEBUG] ReferenceTransformer: "var.zone" references: []
+2020/09/07 00:26:30 [DEBUG] ReferenceTransformer: "provider[\"registry.terraform.io/hashicorp/google\"]" references: []
+2020/09/07 00:26:30 [TRACE] Completed graph transform *terraform.ReferenceTransformer (no changes)
+2020/09/07 00:26:30 [TRACE] Executing graph transform *terraform.AttachDependenciesTransformer
+2020/09/07 00:26:30 [TRACE] AttachDependenciesTransformer: google_container_cluster.primary depends on []
+2020/09/07 00:26:30 [TRACE] Completed graph transform *terraform.AttachDependenciesTransformer (no changes)
+2020/09/07 00:26:30 [TRACE] Executing graph transform *terraform.ForcedCBDTransformer
+2020/09/07 00:26:30 [TRACE] ForcedCBDTransformer: "google_container_cluster.primary" (*terraform.NodeApplyableResourceInstance) has no CBD descendent, so skipping
+2020/09/07 00:26:30 [TRACE] Completed graph transform *terraform.ForcedCBDTransformer (no changes)
+2020/09/07 00:26:30 [TRACE] Executing graph transform *terraform.DestroyEdgeTransformer
+2020/09/07 00:26:30 [TRACE] Completed graph transform *terraform.DestroyEdgeTransformer (no changes)
+2020/09/07 00:26:30 [TRACE] Executing graph transform *terraform.CBDEdgeTransformer
+2020/09/07 00:26:30 [TRACE] Completed graph transform *terraform.CBDEdgeTransformer (no changes)
+2020/09/07 00:26:30 [TRACE] Executing graph transform *terraform.destroyRootOutputTransformer
+2020/09/07 00:26:30 [TRACE] Completed graph transform *terraform.destroyRootOutputTransformer (no changes)
+2020/09/07 00:26:30 [TRACE] Executing graph transform *terraform.pruneUnusedNodesTransformer
+2020/09/07 00:26:30 [TRACE] Completed graph transform *terraform.pruneUnusedNodesTransformer (no changes)
+2020/09/07 00:26:30 [TRACE] Executing graph transform *terraform.TargetsTransformer
+2020/09/07 00:26:30 [TRACE] Completed graph transform *terraform.TargetsTransformer (no changes)
+2020/09/07 00:26:30 [TRACE] Executing graph transform *terraform.CountBoundaryTransformer
+2020/09/07 00:26:30 [TRACE] Completed graph transform *terraform.CountBoundaryTransformer with new graph:
+  google_container_cluster.primary - *terraform.NodeApplyableResourceInstance
+    google_container_cluster.primary (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  google_container_cluster.primary (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    google_container_cluster.primary - *terraform.NodeApplyableResourceInstance
+    google_container_cluster.primary (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+    var.cluster_name - *terraform.NodeRootVariable
+    var.project_id - *terraform.NodeRootVariable
+    var.region - *terraform.NodeRootVariable
+    var.zone - *terraform.NodeRootVariable
+  provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  var.cluster_name - *terraform.NodeRootVariable
+  var.project_id - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+  var.zone - *terraform.NodeRootVariable
+  ------
+2020/09/07 00:26:30 [TRACE] Executing graph transform *terraform.CloseProviderTransformer
+2020/09/07 00:26:30 [TRACE] Completed graph transform *terraform.CloseProviderTransformer with new graph:
+  google_container_cluster.primary - *terraform.NodeApplyableResourceInstance
+    google_container_cluster.primary (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  google_container_cluster.primary (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    google_container_cluster.primary - *terraform.NodeApplyableResourceInstance
+    google_container_cluster.primary (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+    var.cluster_name - *terraform.NodeRootVariable
+    var.project_id - *terraform.NodeRootVariable
+    var.region - *terraform.NodeRootVariable
+    var.zone - *terraform.NodeRootVariable
+  provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/google"] (close) - *terraform.graphNodeCloseProvider
+    google_container_cluster.primary - *terraform.NodeApplyableResourceInstance
+    google_container_cluster.primary (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  var.cluster_name - *terraform.NodeRootVariable
+  var.project_id - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+  var.zone - *terraform.NodeRootVariable
+  ------
+2020/09/07 00:26:30 [TRACE] Executing graph transform *terraform.CloseProvisionerTransformer
+2020/09/07 00:26:30 [TRACE] Completed graph transform *terraform.CloseProvisionerTransformer (no changes)
+2020/09/07 00:26:30 [TRACE] Executing graph transform *terraform.applyDestroyNodeReferenceFixupTransformer
+2020/09/07 00:26:30 [TRACE] Completed graph transform *terraform.applyDestroyNodeReferenceFixupTransformer (no changes)
+2020/09/07 00:26:30 [TRACE] Executing graph transform *terraform.CloseRootModuleTransformer
+2020/09/07 00:26:30 [TRACE] Completed graph transform *terraform.CloseRootModuleTransformer with new graph:
+  google_container_cluster.primary - *terraform.NodeApplyableResourceInstance
+    google_container_cluster.primary (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  google_container_cluster.primary (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    google_container_cluster.primary - *terraform.NodeApplyableResourceInstance
+    google_container_cluster.primary (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+    var.cluster_name - *terraform.NodeRootVariable
+    var.project_id - *terraform.NodeRootVariable
+    var.region - *terraform.NodeRootVariable
+    var.zone - *terraform.NodeRootVariable
+  provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/google"] (close) - *terraform.graphNodeCloseProvider
+    google_container_cluster.primary - *terraform.NodeApplyableResourceInstance
+    google_container_cluster.primary (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  root - *terraform.nodeCloseModule
+    meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    provider["registry.terraform.io/hashicorp/google"] (close) - *terraform.graphNodeCloseProvider
+  var.cluster_name - *terraform.NodeRootVariable
+  var.project_id - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+  var.zone - *terraform.NodeRootVariable
+  ------
+2020/09/07 00:26:30 [TRACE] Executing graph transform *terraform.TransitiveReductionTransformer
+2020/09/07 00:26:30 [TRACE] Completed graph transform *terraform.TransitiveReductionTransformer with new graph:
+  google_container_cluster.primary - *terraform.NodeApplyableResourceInstance
+    google_container_cluster.primary (expand) - *terraform.nodeExpandApplyableResource
+  google_container_cluster.primary (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    google_container_cluster.primary - *terraform.NodeApplyableResourceInstance
+    var.cluster_name - *terraform.NodeRootVariable
+    var.project_id - *terraform.NodeRootVariable
+    var.region - *terraform.NodeRootVariable
+    var.zone - *terraform.NodeRootVariable
+  provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/google"] (close) - *terraform.graphNodeCloseProvider
+    google_container_cluster.primary - *terraform.NodeApplyableResourceInstance
+  root - *terraform.nodeCloseModule
+    meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    provider["registry.terraform.io/hashicorp/google"] (close) - *terraform.graphNodeCloseProvider
+  var.cluster_name - *terraform.NodeRootVariable
+  var.project_id - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+  var.zone - *terraform.NodeRootVariable
+  ------
+2020/09/07 00:26:30 [DEBUG] Starting graph walk: walkApply
+2020/09/07 00:26:30 [TRACE] dag/walk: visiting "provider[\"registry.terraform.io/hashicorp/google\"]"
+2020/09/07 00:26:30 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/google\"]": starting visit (*terraform.NodeApplyableProvider)
+2020/09/07 00:26:30 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/google\"]": evaluating
+2020/09/07 00:26:30 [TRACE] [walkApply] Entering eval tree: provider["registry.terraform.io/hashicorp/google"]
+2020/09/07 00:26:30 [TRACE] eval: *terraform.EvalSequence
+2020/09/07 00:26:30 [TRACE] eval: *terraform.EvalInitProvider
+2020-09-07T00:26:30.324Z [INFO]  plugin: configuring client automatic mTLS
+2020/09/07 00:26:30 [TRACE] dag/walk: visiting "var.project_id"
+2020/09/07 00:26:30 [TRACE] vertex "var.project_id": starting visit (*terraform.NodeRootVariable)
+2020/09/07 00:26:30 [TRACE] vertex "var.project_id": evaluating
+2020/09/07 00:26:30 [TRACE] [walkApply] Entering eval tree: var.project_id
+2020/09/07 00:26:30 [TRACE] eval: *terraform.EvalSequence
+2020/09/07 00:26:30 [TRACE] [walkApply] Exiting eval tree: var.project_id
+2020/09/07 00:26:30 [TRACE] vertex "var.project_id": visit complete
+2020/09/07 00:26:30 [TRACE] dag/walk: visiting "var.zone"
+2020/09/07 00:26:30 [TRACE] vertex "var.zone": starting visit (*terraform.NodeRootVariable)
+2020/09/07 00:26:30 [TRACE] vertex "var.zone": evaluating
+2020/09/07 00:26:30 [TRACE] [walkApply] Entering eval tree: var.zone
+2020/09/07 00:26:30 [TRACE] eval: *terraform.EvalSequence
+2020/09/07 00:26:30 [TRACE] [walkApply] Exiting eval tree: var.zone
+2020/09/07 00:26:30 [TRACE] vertex "var.zone": visit complete
+2020/09/07 00:26:30 [TRACE] dag/walk: visiting "var.region"
+2020/09/07 00:26:30 [TRACE] vertex "var.region": starting visit (*terraform.NodeRootVariable)
+2020/09/07 00:26:30 [TRACE] vertex "var.region": evaluating
+2020/09/07 00:26:30 [TRACE] [walkApply] Entering eval tree: var.region
+2020/09/07 00:26:30 [TRACE] eval: *terraform.EvalSequence
+2020/09/07 00:26:30 [TRACE] [walkApply] Exiting eval tree: var.region
+2020/09/07 00:26:30 [TRACE] vertex "var.region": visit complete
+2020/09/07 00:26:30 [TRACE] dag/walk: visiting "var.cluster_name"
+2020/09/07 00:26:30 [TRACE] vertex "var.cluster_name": starting visit (*terraform.NodeRootVariable)
+2020/09/07 00:26:30 [TRACE] vertex "var.cluster_name": evaluating
+2020/09/07 00:26:30 [TRACE] [walkApply] Entering eval tree: var.cluster_name
+2020/09/07 00:26:30 [TRACE] eval: *terraform.EvalSequence
+2020/09/07 00:26:30 [TRACE] [walkApply] Exiting eval tree: var.cluster_name
+2020/09/07 00:26:30 [TRACE] vertex "var.cluster_name": visit complete
+2020-09-07T00:26:30.361Z [DEBUG] plugin: starting plugin: path=.terraform/plugins/registry.terraform.io/hashicorp/google/2.5.1/linux_amd64/terraform-provider-google_v2.5.1_x4 args=[.terraform/plugins/registry.terraform.io/hashicorp/google/2.5.1/linux_amd64/terraform-provider-google_v2.5.1_x4]
+2020-09-07T00:26:30.361Z [DEBUG] plugin: plugin started: path=.terraform/plugins/registry.terraform.io/hashicorp/google/2.5.1/linux_amd64/terraform-provider-google_v2.5.1_x4 pid=2725
+2020-09-07T00:26:30.361Z [DEBUG] plugin: waiting for RPC address: path=.terraform/plugins/registry.terraform.io/hashicorp/google/2.5.1/linux_amd64/terraform-provider-google_v2.5.1_x4
+2020-09-07T00:26:30.381Z [INFO]  plugin.terraform-provider-google_v2.5.1_x4: configuring server automatic mTLS: timestamp=2020-09-07T00:26:30.380Z
+2020-09-07T00:26:30.419Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: plugin address: network=unix address=/tmp/plugin189465073 timestamp=2020-09-07T00:26:30.419Z
+2020-09-07T00:26:30.419Z [DEBUG] plugin: using plugin: version=5
+2020/09/07 00:26:30 [TRACE] BuiltinEvalContext: Initialized "provider[\"registry.terraform.io/hashicorp/google\"]" provider for provider["registry.terraform.io/hashicorp/google"]
+2020/09/07 00:26:30 [TRACE] eval: terraform.EvalNoop
+2020/09/07 00:26:30 [TRACE] eval: *terraform.EvalOpFilter
+2020/09/07 00:26:30 [TRACE] eval: *terraform.EvalSequence
+2020/09/07 00:26:30 [TRACE] eval: *terraform.EvalGetProvider
+2020-09-07T00:26:30.499Z [TRACE] plugin.stdio: waiting for stdio data
+2020/09/07 00:26:30 [TRACE] eval: *terraform.EvalOpFilter
+2020/09/07 00:26:30 [TRACE] eval: *terraform.EvalSequence
+2020/09/07 00:26:30 [TRACE] eval: *terraform.EvalConfigProvider
+2020/09/07 00:26:30 [TRACE] buildProviderConfig for provider["registry.terraform.io/hashicorp/google"]: using explicit config only
+2020/09/07 00:26:30 [TRACE] GRPCProvider: GetSchema
+2020-09-07T00:26:30.500Z [WARN]  plugin.stdio: received EOF, stopping recv loop: err="rpc error: code = Unimplemented desc = unknown service plugin.GRPCStdio"
+2020/09/07 00:26:30 [TRACE] No provider meta schema returned
+2020/09/07 00:26:30 [TRACE] GRPCProvider: Configure
+2020-09-07T00:26:30.535Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: 2020/09/07 00:26:30 [INFO] Authenticating using DefaultClient...
+2020-09-07T00:26:30.535Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: 2020/09/07 00:26:30 [INFO]   -- Scopes: [https://www.googleapis.com/auth/compute https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/ndev.clouddns.readwrite https://www.googleapis.com/auth/devstorage.full_control]
+2020-09-07T00:26:30.537Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: 2020/09/07 00:26:30 [INFO] Instantiating GCE client...
+2020-09-07T00:26:30.538Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: 2020/09/07 00:26:30 [INFO] Instantiating GCE Beta client...
+2020-09-07T00:26:30.538Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: 2020/09/07 00:26:30 [INFO] Instantiating GKE client...
+2020-09-07T00:26:30.538Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: 2020/09/07 00:26:30 [INFO] Instantiating GKE Beta client...
+2020-09-07T00:26:30.538Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: 2020/09/07 00:26:30 [INFO] Instantiating Google Cloud DNS client...
+2020-09-07T00:26:30.538Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: 2020/09/07 00:26:30 [INFO] Instantiating Google Cloud DNS Beta client...
+2020-09-07T00:26:30.538Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: 2020/09/07 00:26:30 [INFO] Instantiating Google Cloud KMS Client...
+2020-09-07T00:26:30.538Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: 2020/09/07 00:26:30 [INFO] Instantiating Google Stackdriver Logging client...
+2020-09-07T00:26:30.538Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: 2020/09/07 00:26:30 [INFO] Instantiating Google Storage Client...
+2020-09-07T00:26:30.538Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: 2020/09/07 00:26:30 [INFO] Instantiating Google SqlAdmin Client...
+2020-09-07T00:26:30.538Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: 2020/09/07 00:26:30 [INFO] Instantiating Google Pubsub Client...
+2020-09-07T00:26:30.538Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: 2020/09/07 00:26:30 [INFO] Instantiating Google Dataflow Client...
+2020-09-07T00:26:30.538Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: 2020/09/07 00:26:30 [INFO] Instantiating Google Cloud ResourceManager Client...
+2020-09-07T00:26:30.538Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: 2020/09/07 00:26:30 [INFO] Instantiating Google Cloud ResourceManager V Client...
+2020-09-07T00:26:30.538Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: 2020/09/07 00:26:30 [INFO] Instantiating Google Cloud Runtimeconfig Client...
+2020-09-07T00:26:30.538Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: 2020/09/07 00:26:30 [INFO] Instantiating Google Cloud IAM Client...
+2020-09-07T00:26:30.538Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: 2020/09/07 00:26:30 [INFO] Instantiating Google Cloud IAMCredentials Client...
+2020-09-07T00:26:30.538Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: 2020/09/07 00:26:30 [INFO] Instantiating Google Cloud Service Management Client...
+2020-09-07T00:26:30.538Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: 2020/09/07 00:26:30 [INFO] Instantiating Google Cloud Service Usage Client...
+2020-09-07T00:26:30.538Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: 2020/09/07 00:26:30 [INFO] Instantiating Google Cloud Billing Client...
+2020-09-07T00:26:30.538Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: 2020/09/07 00:26:30 [INFO] Instantiating Google Cloud Build Client...
+2020-09-07T00:26:30.538Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: 2020/09/07 00:26:30 [INFO] Instantiating Google Cloud BigQuery Client...
+2020-09-07T00:26:30.538Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: 2020/09/07 00:26:30 [INFO] Instantiating Google Cloud CloudFunctions Client...
+2020-09-07T00:26:30.538Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: 2020/09/07 00:26:30 [INFO] Instantiating Google Cloud Source Repo Client...
+2020-09-07T00:26:30.539Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: 2020/09/07 00:26:30 [INFO] Instantiating Google Cloud Spanner Client...
+2020-09-07T00:26:30.539Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: 2020/09/07 00:26:30 [INFO] Instantiating Google Cloud Dataproc Client...
+2020-09-07T00:26:30.539Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: 2020/09/07 00:26:30 [INFO] Instantiating Google Cloud IoT Core Client...
+2020-09-07T00:26:30.539Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: 2020/09/07 00:26:30 [INFO] Instantiating App Engine Client...
+2020-09-07T00:26:30.539Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: 2020/09/07 00:26:30 [INFO] Instantiating Cloud Composer Client...
+2020-09-07T00:26:30.539Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: 2020/09/07 00:26:30 [INFO] Instantiating Google Cloud Storage Transfer Client...
+2020/09/07 00:26:30 [TRACE] eval: terraform.EvalNoop
+2020/09/07 00:26:30 [TRACE] [walkApply] Exiting eval tree: provider["registry.terraform.io/hashicorp/google"]
+2020/09/07 00:26:30 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/google\"]": visit complete
+2020/09/07 00:26:30 [TRACE] dag/walk: visiting "google_container_cluster.primary (expand)"
+2020/09/07 00:26:30 [TRACE] vertex "google_container_cluster.primary (expand)": starting visit (*terraform.nodeExpandApplyableResource)
+2020/09/07 00:26:30 [TRACE] vertex "google_container_cluster.primary (expand)": expanding dynamic subgraph
+2020/09/07 00:26:30 [TRACE] vertex "google_container_cluster.primary (expand)": entering dynamic subgraph
+2020/09/07 00:26:30 [TRACE] dag/walk: visiting "google_container_cluster.primary"
+2020/09/07 00:26:30 [TRACE] vertex "google_container_cluster.primary": starting visit (*terraform.NodeApplyableResource)
+2020/09/07 00:26:30 [TRACE] vertex "google_container_cluster.primary": evaluating
+2020/09/07 00:26:30 [TRACE] [walkApply] Entering eval tree: google_container_cluster.primary
+2020/09/07 00:26:30 [TRACE] eval: *terraform.EvalWriteResourceState
+2020/09/07 00:26:30 [TRACE] [walkApply] Exiting eval tree: google_container_cluster.primary
+2020/09/07 00:26:30 [TRACE] vertex "google_container_cluster.primary": visit complete
+2020/09/07 00:26:30 [TRACE] vertex "google_container_cluster.primary (expand)": dynamic subgraph completed successfully
+2020/09/07 00:26:30 [TRACE] vertex "google_container_cluster.primary (expand)": visit complete
+2020/09/07 00:26:30 [TRACE] dag/walk: visiting "google_container_cluster.primary"
+2020/09/07 00:26:30 [TRACE] vertex "google_container_cluster.primary": starting visit (*terraform.NodeApplyableResourceInstance)
+2020/09/07 00:26:30 [TRACE] vertex "google_container_cluster.primary": evaluating
+2020/09/07 00:26:30 [TRACE] [walkApply] Entering eval tree: google_container_cluster.primary
+2020/09/07 00:26:30 [TRACE] eval: *terraform.EvalSequence
+2020/09/07 00:26:30 [TRACE] eval: *terraform.EvalGetProvider
+2020/09/07 00:26:30 [TRACE] eval: *terraform.EvalReadDiff
+2020/09/07 00:26:30 [TRACE] EvalReadDiff: Read Create change from plan for google_container_cluster.primary
+2020/09/07 00:26:30 [TRACE] eval: *terraform.EvalIf
+2020/09/07 00:26:30 [TRACE] eval: terraform.EvalNoop
+2020/09/07 00:26:30 [TRACE] eval: *terraform.EvalIf
+2020/09/07 00:26:30 [TRACE] eval: *terraform.EvalReadState
+2020/09/07 00:26:30 [TRACE] EvalReadState: reading state for google_container_cluster.primary
+2020/09/07 00:26:30 [TRACE] EvalReadState: no state present for google_container_cluster.primary
+2020/09/07 00:26:30 [TRACE] eval: *terraform.EvalReadDiff
+2020/09/07 00:26:30 [TRACE] EvalReadDiff: Read Create change from plan for google_container_cluster.primary
+2020/09/07 00:26:30 [TRACE] eval: *terraform.EvalDiff
+2020/09/07 00:26:30 [TRACE] Re-validating config for "google_container_cluster.primary"
+2020/09/07 00:26:30 [TRACE] GRPCProvider: ValidateResourceTypeConfig
+2020/09/07 00:26:30 [TRACE] GRPCProvider: PlanResourceChange
+2020/09/07 00:26:30 [WARN] Provider "registry.terraform.io/hashicorp/google" produced an invalid plan for google_container_cluster.primary, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .enable_kubernetes_alpha: planned value cty.False does not match config value cty.NullVal(cty.Bool)
+      - .enable_legacy_abac: planned value cty.False does not match config value cty.NullVal(cty.Bool)
+      - .network: planned value cty.StringVal("default") does not match config value cty.NullVal(cty.String)
+      - .network_policy: attribute representing nested block must not be unknown itself; set nested attribute values to unknown instead
+      - .node_pool: attribute representing nested block must not be unknown itself; set nested attribute values to unknown instead
+      - .master_auth[0].password: sensitive planned value does not match config value
+      - .master_auth[0].username: planned value cty.NullVal(cty.String) does not match config value cty.StringVal("")
+      - .node_config[0].preemptible: planned value cty.False does not match config value cty.NullVal(cty.Bool)
+      - .addons_config: attribute representing nested block must not be unknown itself; set nested attribute values to unknown instead
+2020/09/07 00:26:30 [TRACE] eval: *terraform.EvalCheckPlannedChange
+2020/09/07 00:26:30 [TRACE] EvalCheckPlannedChange: Verifying that actual change (action Create) matches planned change (action Create)
+2020/09/07 00:26:30 [TRACE] eval: *terraform.EvalGetProvider
+2020/09/07 00:26:30 [TRACE] eval: *terraform.EvalReadState
+2020/09/07 00:26:30 [TRACE] EvalReadState: reading state for google_container_cluster.primary
+2020/09/07 00:26:30 [TRACE] EvalReadState: no state present for google_container_cluster.primary
+2020/09/07 00:26:30 [TRACE] eval: *terraform.EvalReduceDiff
+2020/09/07 00:26:30 [TRACE] eval: *terraform.EvalIf
+2020/09/07 00:26:30 [TRACE] eval: terraform.EvalNoop
+2020/09/07 00:26:30 [TRACE] eval: *terraform.EvalApplyPre
+2020/09/07 00:26:30 [TRACE] eval: *terraform.EvalApply
+2020/09/07 00:26:30 [DEBUG] EvalApply: ProviderMeta config value set
+2020/09/07 00:26:30 [DEBUG] google_container_cluster.primary: applying the planned Create change
+2020/09/07 00:26:30 [TRACE] GRPCProvider: ApplyResourceChange
+2020-09-07T00:26:30.563Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: 2020/09/07 00:26:30 [DEBUG] Locking "google-container-cluster/proven-sum-252123/us-central1-a/marcellus-wallace"
+2020-09-07T00:26:30.563Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: 2020/09/07 00:26:30 [DEBUG] Locked "google-container-cluster/proven-sum-252123/us-central1-a/marcellus-wallace"
+2020-09-07T00:26:30.563Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: 2020/09/07 00:26:30 [DEBUG] Waiting for state to become: [success]
+2020-09-07T00:26:33.408Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: 2020/09/07 00:26:33 [DEBUG] Waiting for state to become: [DONE]
+2020-09-07T00:26:33.445Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: 2020/09/07 00:26:33 [DEBUG] Got RUNNING while polling for operation operation-1599438393283-35eb8186's status
+2020-09-07T00:26:33.445Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: 2020/09/07 00:26:33 [TRACE] Waiting 2s before next try
+2020/09/07 00:26:35 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/hashicorp/google\"] (close)"
+2020/09/07 00:26:35 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/google\"] (close)" is waiting for "google_container_cluster.primary"
+2020/09/07 00:26:35 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "google_container_cluster.primary"
+2020-09-07T00:26:35.480Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: 2020/09/07 00:26:35 [DEBUG] Got RUNNING while polling for operation operation-1599438393283-35eb8186's status
+2020-09-07T00:26:35.480Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: 2020/09/07 00:26:35 [TRACE] Waiting 4s before next try
+2020-09-07T00:26:39.516Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: 2020/09/07 00:26:39 [DEBUG] Got RUNNING while polling for operation operation-1599438393283-35eb8186's status
+2020-09-07T00:26:39.516Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: 2020/09/07 00:26:39 [TRACE] Waiting 8s before next try
+2020/09/07 00:26:40 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/hashicorp/google\"] (close)"
+2020/09/07 00:26:40 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/google\"] (close)" is waiting for "google_container_cluster.primary"
+2020/09/07 00:26:40 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "google_container_cluster.primary"
+2020/09/07 00:26:45 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/hashicorp/google\"] (close)"
+2020/09/07 00:26:45 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/google\"] (close)" is waiting for "google_container_cluster.primary"
+2020/09/07 00:26:45 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "google_container_cluster.primary"
+2020-09-07T00:26:47.551Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: 2020/09/07 00:26:47 [DEBUG] Got RUNNING while polling for operation operation-1599438393283-35eb8186's status
+2020-09-07T00:26:47.551Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: 2020/09/07 00:26:47 [TRACE] Waiting 10s before next try
+2020/09/07 00:26:50 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/google\"] (close)" is waiting for "google_container_cluster.primary"
+2020/09/07 00:26:50 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/hashicorp/google\"] (close)"
+2020/09/07 00:26:50 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "google_container_cluster.primary"
+2020/09/07 00:26:55 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/hashicorp/google\"] (close)"
+2020/09/07 00:26:55 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/google\"] (close)" is waiting for "google_container_cluster.primary"
+2020/09/07 00:26:55 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "google_container_cluster.primary"
+2020-09-07T00:26:57.591Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: 2020/09/07 00:26:57 [DEBUG] Got RUNNING while polling for operation operation-1599438393283-35eb8186's status
+2020-09-07T00:26:57.591Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: 2020/09/07 00:26:57 [TRACE] Waiting 10s before next try
+2020/09/07 00:27:00 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/google\"] (close)" is waiting for "google_container_cluster.primary"
+2020/09/07 00:27:00 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/hashicorp/google\"] (close)"
+2020/09/07 00:27:00 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "google_container_cluster.primary"
+2020/09/07 00:27:05 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/hashicorp/google\"] (close)"
+2020/09/07 00:27:05 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/google\"] (close)" is waiting for "google_container_cluster.primary"
+2020/09/07 00:27:05 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "google_container_cluster.primary"
+2020-09-07T00:27:07.625Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: 2020/09/07 00:27:07 [DEBUG] Got RUNNING while polling for operation operation-1599438393283-35eb8186's status
+2020-09-07T00:27:07.625Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: 2020/09/07 00:27:07 [TRACE] Waiting 10s before next try
+2020/09/07 00:27:10 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/hashicorp/google\"] (close)"
+2020/09/07 00:27:10 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/google\"] (close)" is waiting for "google_container_cluster.primary"
+2020/09/07 00:27:10 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "google_container_cluster.primary"
+2020/09/07 00:27:15 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/hashicorp/google\"] (close)"
+2020/09/07 00:27:15 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/google\"] (close)" is waiting for "google_container_cluster.primary"
+2020/09/07 00:27:15 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "google_container_cluster.primary"
+2020-09-07T00:27:17.699Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: 2020/09/07 00:27:17 [DEBUG] Got RUNNING while polling for operation operation-1599438393283-35eb8186's status
+2020-09-07T00:27:17.699Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: 2020/09/07 00:27:17 [TRACE] Waiting 10s before next try
+2020/09/07 00:27:20 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/hashicorp/google\"] (close)"
+2020/09/07 00:27:20 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/google\"] (close)" is waiting for "google_container_cluster.primary"
+2020/09/07 00:27:20 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "google_container_cluster.primary"
+2020/09/07 00:27:25 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/google\"] (close)" is waiting for "google_container_cluster.primary"
+2020/09/07 00:27:25 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/hashicorp/google\"] (close)"
+2020/09/07 00:27:25 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "google_container_cluster.primary"
+2020-09-07T00:27:27.733Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: 2020/09/07 00:27:27 [DEBUG] Got RUNNING while polling for operation operation-1599438393283-35eb8186's status
+2020-09-07T00:27:27.733Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: 2020/09/07 00:27:27 [TRACE] Waiting 10s before next try
+2020/09/07 00:27:30 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/hashicorp/google\"] (close)"
+2020/09/07 00:27:30 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/google\"] (close)" is waiting for "google_container_cluster.primary"
+2020/09/07 00:27:30 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "google_container_cluster.primary"
+2020/09/07 00:27:35 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/hashicorp/google\"] (close)"
+2020/09/07 00:27:35 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/google\"] (close)" is waiting for "google_container_cluster.primary"
+2020/09/07 00:27:35 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "google_container_cluster.primary"
+2020-09-07T00:27:37.766Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: 2020/09/07 00:27:37 [DEBUG] Got RUNNING while polling for operation operation-1599438393283-35eb8186's status
+2020-09-07T00:27:37.766Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: 2020/09/07 00:27:37 [TRACE] Waiting 10s before next try
+2020/09/07 00:27:40 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/hashicorp/google\"] (close)"
+2020/09/07 00:27:40 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/google\"] (close)" is waiting for "google_container_cluster.primary"
+2020/09/07 00:27:40 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "google_container_cluster.primary"
+2020/09/07 00:27:45 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/hashicorp/google\"] (close)"
+2020/09/07 00:27:45 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/google\"] (close)" is waiting for "google_container_cluster.primary"
+2020/09/07 00:27:45 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "google_container_cluster.primary"
+2020-09-07T00:27:47.789Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: 2020/09/07 00:27:47 [DEBUG] Got RUNNING while polling for operation operation-1599438393283-35eb8186's status
+2020-09-07T00:27:47.789Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: 2020/09/07 00:27:47 [TRACE] Waiting 10s before next try
+2020/09/07 00:27:50 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/hashicorp/google\"] (close)"
+2020/09/07 00:27:50 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/google\"] (close)" is waiting for "google_container_cluster.primary"
+2020/09/07 00:27:50 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "google_container_cluster.primary"
+2020/09/07 00:27:55 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/hashicorp/google\"] (close)"
+2020/09/07 00:27:55 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/google\"] (close)" is waiting for "google_container_cluster.primary"
+2020/09/07 00:27:55 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "google_container_cluster.primary"
+2020-09-07T00:27:57.820Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: 2020/09/07 00:27:57 [DEBUG] Got RUNNING while polling for operation operation-1599438393283-35eb8186's status
+2020-09-07T00:27:57.820Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: 2020/09/07 00:27:57 [TRACE] Waiting 10s before next try
+2020/09/07 00:28:00 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/google\"] (close)" is waiting for "google_container_cluster.primary"
+2020/09/07 00:28:00 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/hashicorp/google\"] (close)"
+2020/09/07 00:28:00 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "google_container_cluster.primary"
+2020/09/07 00:28:05 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/hashicorp/google\"] (close)"
+2020/09/07 00:28:05 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/google\"] (close)" is waiting for "google_container_cluster.primary"
+2020/09/07 00:28:05 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "google_container_cluster.primary"
+2020-09-07T00:28:07.857Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: 2020/09/07 00:28:07 [DEBUG] Got RUNNING while polling for operation operation-1599438393283-35eb8186's status
+2020-09-07T00:28:07.857Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: 2020/09/07 00:28:07 [TRACE] Waiting 10s before next try
+2020/09/07 00:28:10 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/google\"] (close)" is waiting for "google_container_cluster.primary"
+2020/09/07 00:28:10 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/hashicorp/google\"] (close)"
+2020/09/07 00:28:10 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "google_container_cluster.primary"
+2020/09/07 00:28:15 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/hashicorp/google\"] (close)"
+2020/09/07 00:28:15 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/google\"] (close)" is waiting for "google_container_cluster.primary"
+2020/09/07 00:28:15 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "google_container_cluster.primary"
+2020-09-07T00:28:17.914Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: 2020/09/07 00:28:17 [DEBUG] Got RUNNING while polling for operation operation-1599438393283-35eb8186's status
+2020-09-07T00:28:17.914Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: 2020/09/07 00:28:17 [TRACE] Waiting 10s before next try
+2020/09/07 00:28:20 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/hashicorp/google\"] (close)"
+2020/09/07 00:28:20 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/google\"] (close)" is waiting for "google_container_cluster.primary"
+2020/09/07 00:28:20 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "google_container_cluster.primary"
+2020/09/07 00:28:25 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/hashicorp/google\"] (close)"
+2020/09/07 00:28:25 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/google\"] (close)" is waiting for "google_container_cluster.primary"
+2020/09/07 00:28:25 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "google_container_cluster.primary"
+2020-09-07T00:28:27.944Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: 2020/09/07 00:28:27 [DEBUG] Got RUNNING while polling for operation operation-1599438393283-35eb8186's status
+2020-09-07T00:28:27.944Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: 2020/09/07 00:28:27 [TRACE] Waiting 10s before next try
+2020/09/07 00:28:30 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/hashicorp/google\"] (close)"
+2020/09/07 00:28:30 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/google\"] (close)" is waiting for "google_container_cluster.primary"
+2020/09/07 00:28:30 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "google_container_cluster.primary"
+2020/09/07 00:28:35 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/google\"] (close)" is waiting for "google_container_cluster.primary"
+2020/09/07 00:28:35 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/hashicorp/google\"] (close)"
+2020/09/07 00:28:35 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "google_container_cluster.primary"
+2020-09-07T00:28:37.969Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: 2020/09/07 00:28:37 [DEBUG] Got RUNNING while polling for operation operation-1599438393283-35eb8186's status
+2020-09-07T00:28:37.969Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: 2020/09/07 00:28:37 [TRACE] Waiting 10s before next try
+2020/09/07 00:28:40 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/hashicorp/google\"] (close)"
+2020/09/07 00:28:40 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/google\"] (close)" is waiting for "google_container_cluster.primary"
+2020/09/07 00:28:40 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "google_container_cluster.primary"
+2020/09/07 00:28:45 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/hashicorp/google\"] (close)"
+2020/09/07 00:28:45 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/google\"] (close)" is waiting for "google_container_cluster.primary"
+2020/09/07 00:28:45 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "google_container_cluster.primary"
+2020-09-07T00:28:48.001Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: 2020/09/07 00:28:48 [DEBUG] Got RUNNING while polling for operation operation-1599438393283-35eb8186's status
+2020-09-07T00:28:48.001Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: 2020/09/07 00:28:48 [TRACE] Waiting 10s before next try
+2020/09/07 00:28:50 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/hashicorp/google\"] (close)"
+2020/09/07 00:28:50 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/google\"] (close)" is waiting for "google_container_cluster.primary"
+2020/09/07 00:28:50 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "google_container_cluster.primary"
+2020/09/07 00:28:55 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/hashicorp/google\"] (close)"
+2020/09/07 00:28:55 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/google\"] (close)" is waiting for "google_container_cluster.primary"
+2020/09/07 00:28:55 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "google_container_cluster.primary"
+2020-09-07T00:28:58.030Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: 2020/09/07 00:28:58 [DEBUG] Got RUNNING while polling for operation operation-1599438393283-35eb8186's status
+2020-09-07T00:28:58.030Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: 2020/09/07 00:28:58 [TRACE] Waiting 10s before next try
+2020/09/07 00:29:00 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/hashicorp/google\"] (close)"
+2020/09/07 00:29:00 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/google\"] (close)" is waiting for "google_container_cluster.primary"
+2020/09/07 00:29:00 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "google_container_cluster.primary"
+2020/09/07 00:29:05 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/google\"] (close)" is waiting for "google_container_cluster.primary"
+2020/09/07 00:29:05 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/hashicorp/google\"] (close)"
+2020/09/07 00:29:05 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "google_container_cluster.primary"
+2020-09-07T00:29:08.065Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: 2020/09/07 00:29:08 [DEBUG] Got RUNNING while polling for operation operation-1599438393283-35eb8186's status
+2020-09-07T00:29:08.065Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: 2020/09/07 00:29:08 [TRACE] Waiting 10s before next try
+2020/09/07 00:29:10 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/hashicorp/google\"] (close)"
+2020/09/07 00:29:10 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/google\"] (close)" is waiting for "google_container_cluster.primary"
+2020/09/07 00:29:10 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "google_container_cluster.primary"
+2020/09/07 00:29:15 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/google\"] (close)" is waiting for "google_container_cluster.primary"
+2020/09/07 00:29:15 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/hashicorp/google\"] (close)"
+2020/09/07 00:29:15 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "google_container_cluster.primary"
+2020-09-07T00:29:18.100Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: 2020/09/07 00:29:18 [DEBUG] Got DONE while polling for operation operation-1599438393283-35eb8186's status
+2020-09-07T00:29:18.100Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: 2020/09/07 00:29:18 [INFO] GKE cluster marcellus-wallace has been created
+2020-09-07T00:29:18.100Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: 2020/09/07 00:29:18 [DEBUG] Waiting for state to become: [success]
+2020-09-07T00:29:18.140Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: 2020/09/07 00:29:18 [DEBUG] Unlocking "google-container-cluster/proven-sum-252123/us-central1-a/marcellus-wallace"
+2020-09-07T00:29:18.140Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: 2020/09/07 00:29:18 [DEBUG] Unlocked "google-container-cluster/proven-sum-252123/us-central1-a/marcellus-wallace"
+2020-09-07T00:29:18.143Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: panic: runtime error: invalid memory address or nil pointer dereference
+2020-09-07T00:29:18.143Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: [signal SIGSEGV: segmentation violation code=0x1 addr=0x0 pc=0x1629fe7]
+2020-09-07T00:29:18.143Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: 
+2020-09-07T00:29:18.143Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: goroutine 12 [running]:
+2020-09-07T00:29:18.143Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: github.com/terraform-providers/terraform-provider-google/google.flattenMaintenancePolicy(...)
+2020-09-07T00:29:18.143Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: 	/opt/teamcity-agent/work/5d79fe75d4460a2f/src/github.com/terraform-providers/terraform-provider-google/google/resource_container_cluster.go:1821
+2020-09-07T00:29:18.143Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: github.com/terraform-providers/terraform-provider-google/google.resourceContainerClusterRead(0xc0003d0af0, 0x1a1e300, 0xc00048c820, 0x1880380, 0x2fc5240)
+2020-09-07T00:29:18.143Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: 	/opt/teamcity-agent/work/5d79fe75d4460a2f/src/github.com/terraform-providers/terraform-provider-google/google/resource_container_cluster.go:847 +0x1f37
+2020-09-07T00:29:18.143Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: github.com/terraform-providers/terraform-provider-google/google.resourceContainerClusterCreate(0xc0003d0af0, 0x1a1e300, 0xc00048c820, 0x0, 0x0)
+2020-09-07T00:29:18.143Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: 	/opt/teamcity-agent/work/5d79fe75d4460a2f/src/github.com/terraform-providers/terraform-provider-google/google/resource_container_cluster.go:797 +0x192e
+2020-09-07T00:29:18.143Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: github.com/terraform-providers/terraform-provider-google/vendor/github.com/hashicorp/terraform/helper/schema.(*Resource).Apply(0xc0003f1f80, 0xc0006de870, 0xc0005770e0, 0x1a1e300, 0xc00048c820, 0x1999f01, 0xc00071cb28, 0xc000781f20)
+2020-09-07T00:29:18.143Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: 	/opt/teamcity-agent/work/5d79fe75d4460a2f/src/github.com/terraform-providers/terraform-provider-google/vendor/github.com/hashicorp/terraform/helper/schema/resource.go:286 +0x363
+2020-09-07T00:29:18.143Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: github.com/terraform-providers/terraform-provider-google/vendor/github.com/hashicorp/terraform/helper/schema.(*Provider).Apply(0xc000017f80, 0xc000557a00, 0xc0006de870, 0xc0005770e0, 0xc00071cf88, 0xc00000c750, 0x199d680)
+2020-09-07T00:29:18.143Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: 	/opt/teamcity-agent/work/5d79fe75d4460a2f/src/github.com/terraform-providers/terraform-provider-google/vendor/github.com/hashicorp/terraform/helper/schema/provider.go:285 +0x9c
+2020-09-07T00:29:18.143Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: github.com/terraform-providers/terraform-provider-google/vendor/github.com/hashicorp/terraform/helper/plugin.(*GRPCProviderServer).ApplyResourceChange(0xc000090de8, 0x1fbe480, 0xc00046f950, 0xc0000727e0, 0xc000090de8, 0xc00046f8c0, 0x1a136c0)
+2020-09-07T00:29:18.143Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: 	/opt/teamcity-agent/work/5d79fe75d4460a2f/src/github.com/terraform-providers/terraform-provider-google/vendor/github.com/hashicorp/terraform/helper/plugin/grpc_provider.go:812 +0x8b0
+2020-09-07T00:29:18.143Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: github.com/terraform-providers/terraform-provider-google/vendor/github.com/hashicorp/terraform/internal/tfplugin5._Provider_ApplyResourceChange_Handler(0x1d12b60, 0xc000090de8, 0x1fbe480, 0xc00046f950, 0xc0006de140, 0x0, 0x0, 0x0, 0xc000707800, 0xaba)
+2020-09-07T00:29:18.143Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: 	/opt/teamcity-agent/work/5d79fe75d4460a2f/src/github.com/terraform-providers/terraform-provider-google/vendor/github.com/hashicorp/terraform/internal/tfplugin5/tfplugin5.pb.go:3019 +0x23e
+2020-09-07T00:29:18.143Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: github.com/terraform-providers/terraform-provider-google/vendor/google.golang.org/grpc.(*Server).processUnaryRPC(0xc000095080, 0x1fc5c00, 0xc000001800, 0xc000704000, 0xc00053b2f0, 0x3039300, 0x0, 0x0, 0x0)
+2020-09-07T00:29:18.143Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: 	/opt/teamcity-agent/work/5d79fe75d4460a2f/src/github.com/terraform-providers/terraform-provider-google/vendor/google.golang.org/grpc/server.go:966 +0x4a2
+2020-09-07T00:29:18.143Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: github.com/terraform-providers/terraform-provider-google/vendor/google.golang.org/grpc.(*Server).handleStream(0xc000095080, 0x1fc5c00, 0xc000001800, 0xc000704000, 0x0)
+2020-09-07T00:29:18.143Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: 	/opt/teamcity-agent/work/5d79fe75d4460a2f/src/github.com/terraform-providers/terraform-provider-google/vendor/google.golang.org/grpc/server.go:1245 +0xd61
+2020-09-07T00:29:18.143Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: github.com/terraform-providers/terraform-provider-google/vendor/google.golang.org/grpc.(*Server).serveStreams.func1.1(0xc000478290, 0xc000095080, 0x1fc5c00, 0xc000001800, 0xc000704000)
+2020-09-07T00:29:18.143Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: 	/opt/teamcity-agent/work/5d79fe75d4460a2f/src/github.com/terraform-providers/terraform-provider-google/vendor/google.golang.org/grpc/server.go:685 +0x9f
+2020-09-07T00:29:18.143Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: created by github.com/terraform-providers/terraform-provider-google/vendor/google.golang.org/grpc.(*Server).serveStreams.func1
+2020-09-07T00:29:18.143Z [DEBUG] plugin.terraform-provider-google_v2.5.1_x4: 	/opt/teamcity-agent/work/5d79fe75d4460a2f/src/github.com/terraform-providers/terraform-provider-google/vendor/google.golang.org/grpc/server.go:683 +0xa1
+2020-09-07T00:29:18.144Z [DEBUG] plugin: plugin process exited: path=.terraform/plugins/registry.terraform.io/hashicorp/google/2.5.1/linux_amd64/terraform-provider-google_v2.5.1_x4 pid=2725 error="exit status 2"
+2020/09/07 00:29:18 [DEBUG] google_container_cluster.primary: apply errored, but we're indicating that via the Error pointer rather than returning it: rpc error: code = Unavailable desc = transport is closing
+2020/09/07 00:29:18 [TRACE] eval: *terraform.EvalMaybeTainted
+2020/09/07 00:29:18 [TRACE] EvalMaybeTainted: google_container_cluster.primary encountered an error during creation, so it is now marked as tainted
+2020/09/07 00:29:18 [TRACE] eval: *terraform.EvalWriteState
+2020/09/07 00:29:18 [TRACE] EvalWriteState: removing state object for google_container_cluster.primary
+2020/09/07 00:29:18 [TRACE] eval: *terraform.EvalApplyProvisioners
+2020/09/07 00:29:18 [TRACE] EvalApplyProvisioners: google_container_cluster.primary has no state, so skipping provisioners
+2020/09/07 00:29:18 [TRACE] eval: *terraform.EvalMaybeTainted
+2020/09/07 00:29:18 [TRACE] EvalMaybeTainted: google_container_cluster.primary encountered an error during creation, so it is now marked as tainted
+2020/09/07 00:29:18 [TRACE] eval: *terraform.EvalWriteState
+2020/09/07 00:29:18 [TRACE] EvalWriteState: removing state object for google_container_cluster.primary
+2020/09/07 00:29:18 [TRACE] eval: *terraform.EvalIf
+2020/09/07 00:29:18 [TRACE] eval: *terraform.EvalIf
+2020/09/07 00:29:18 [TRACE] eval: *terraform.EvalWriteDiff
+2020/09/07 00:29:18 [TRACE] eval: *terraform.EvalApplyPost
+2020/09/07 00:29:18 [ERROR] eval: *terraform.EvalApplyPost, err: rpc error: code = Unavailable desc = transport is closing
+2020/09/07 00:29:18 [ERROR] eval: *terraform.EvalSequence, err: rpc error: code = Unavailable desc = transport is closing
+2020/09/07 00:29:18 [TRACE] [walkApply] Exiting eval tree: google_container_cluster.primary
+2020/09/07 00:29:18 [TRACE] vertex "google_container_cluster.primary": visit complete
+2020/09/07 00:29:18 [TRACE] dag/walk: upstream of "provider[\"registry.terraform.io/hashicorp/google\"] (close)" errored, so skipping
+2020/09/07 00:29:18 [TRACE] dag/walk: upstream of "meta.count-boundary (EachMode fixup)" errored, so skipping
+2020/09/07 00:29:18 [TRACE] dag/walk: upstream of "root" errored, so skipping
+2020/09/07 00:29:18 [TRACE] statemgr.Filesystem: reading latest snapshot from terraform.tfstate
+2020/09/07 00:29:18 [TRACE] statemgr.Filesystem: snapshot file has nil snapshot, but that's okay
+2020/09/07 00:29:18 [TRACE] statemgr.Filesystem: read nil snapshot
+2020/09/07 00:29:18 [TRACE] statemgr.Filesystem: no original state snapshot to back up
+2020/09/07 00:29:18 [TRACE] statemgr.Filesystem: state has changed since last snapshot, so incrementing serial to 1
+2020/09/07 00:29:18 [TRACE] statemgr.Filesystem: writing snapshot at terraform.tfstate
+2020/09/07 00:29:18 [TRACE] statemgr.Filesystem: removing lock metadata file .terraform.tfstate.lock.info
+2020/09/07 00:29:18 [TRACE] statemgr.Filesystem: unlocking terraform.tfstate using fcntl flock
+2020-09-07T00:29:18.179Z [DEBUG] plugin: plugin exited

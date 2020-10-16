@@ -1,0 +1,20 @@
+{
+  "name": "nodejs_rest_microservice",
+  "version": "1.0.0",
+  "description": "create a nodejs REST microservice in a Docker container",
+  "author": "Charles Betz",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "mocha"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "node-fetch": "^2.6.0"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "mocha": "^8.1.3"
+  }
+}
