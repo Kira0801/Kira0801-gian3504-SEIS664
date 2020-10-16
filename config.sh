@@ -10,6 +10,6 @@ apt-get install -y python
 
 
 # to get latest nodejs do the following
-#npm cache clean -f
-#npm install -g n
-#n stable
+npm cache clean -f
+npm install -g n
+n stable
