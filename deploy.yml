@@ -1,0 +1,41 @@
+---
+- name: Deploy node-svc App
+  hosts: node-svc-grp
+  tasks:
+    - name: Ansible copy multiple files with_items
+      copy:
+        src: ./{{item}}
+        dest: ~/node-svc/
+        mode: 0774
+      with_items:
+        ['server.js','package.json']    
+
+
+    #  npm:
+    #    name: express
+    #    global: yes
+    #  become: true
+ 
+    - name: install PM2
+      npm:
+    # see https://pypi.org/project/ansible-modules-pm2/
+        name: pm2
+        global: yes
+      become: true
+
+    - name: Install packages based on package.json.
+      npm:
+        path: /home/node-user/node-svc
+
+    - name: start server.js if not running
+    # https://pm2.keymetrics.io/docs/usage/quick-start/
+    # also consider https://pypi.org/project/ansible-modules-pm2/ 
+      command: pm2 start server.js chdir=/home/node-user/node-svc
+      ignore_errors: yes
+      become: true
+      #pm2:
+      #  name: node-svc
+      #  script: /home/node-user/node-svc-1/server.js
+      #  state: started
+
+

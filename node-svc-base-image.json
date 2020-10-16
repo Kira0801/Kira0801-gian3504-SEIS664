@@ -1,0 +1,22 @@
+{
+  "builders": [
+    {
+      "type": "googlecompute",
+      "project_id": "YOUR PROJECT HERE. YOU MUST CHANGE THIS",
+      "zone": "us-central1-c",
+      "machine_type": "f1-micro",
+      "source_image_family": "ubuntu-minimal-2004-lts",
+      "image_name": "node-svc-base-{{isotime \"2006-01-02-15-04-05\"}}",
+      "image_family": "node-svc-base",
+      "image_description": "Ubuntu 20.04 with nodejs, npm preinstalled",
+      "ssh_username": "node-user"
+    }
+  ],
+  "provisioners": [
+      {
+          "type": "shell",
+          "script": "{{template_dir}}/config.sh",
+          "execute_command": "sudo {{.Path}}"
+      }
+  ]
+}
