@@ -2,7 +2,7 @@
   "builders": [
     {
       "type": "googlecompute",
-      "project_id": "innate-life-28922",
+      "project_id": "innate-life-289222",
       "zone": "us-central1-c",
       "machine_type": "f1-micro",
       "source_image_family": "ubuntu-minimal-2004-lts",
