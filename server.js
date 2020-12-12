@@ -12,7 +12,7 @@ const bodyParser = require('body-parser')
 //const Request = require("request");
 
 // Constants
-const PORT = 3000;
+const PORT = 30100;
 const HOST = '0.0.0.0';
 const app = express();
 
@@ -81,14 +81,14 @@ console.log(`Running on ${PORT}`);
 
 console.log('Console: request is testing a simple self-get')
 
-fetch('http://localhost:3000')
+fetch('http://localhost:30100')
   .then(response => response.json())
   .then(data => console.log(data));
 
 // test a simple self-post
 console.log('Console: request is testing a simple self-post')
 
-const url ='http://localhost:3000';
+const url ='http://localhost:30100';
 const headers = {
   "Content-Type": "application/json"
 };
@@ -144,7 +144,7 @@ function buildURL (strLevel) {
   let nextLevel = intCurrLevel - 1;
   let numNodes = arrNodes.length; // to be derived from arrNodes
   let nextNode = nextLevel >= numNodes ? nextLevel % numNodes : nextLevel;
-  let strURL = "http://"+ arrNodes[nextNode] + ":3000/" + nextLevel;
+  let strURL = "http://"+ arrNodes[nextNode] + ":30100/" + nextLevel;
     
   console.log ("returning URL " + strURL);
    return(strURL);
